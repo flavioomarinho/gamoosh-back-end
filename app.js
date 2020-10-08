@@ -35,6 +35,12 @@ app.get('/newUser', (req,res)=>{
     res.render('createlogin');
 })
 
+app.get('/teste', (req,res)=>{
+    res.render('testeComunicacao');
+    res.status(200);
+    console.log("Informação recebida");
+})
+
 app.post('/login', (req,res) => {
     let getBody = req.body;
     Auth.SignInWithEmailAndPassword(getBody.email, getBody.password)
