@@ -1,14 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<%- include('partials/header')%>
+<div class="principal">
     <title>Dashboard</title>
-</head>
-<body>
-    <h1>Dashboard</h1>
+    <h1>Envie sua mensagem ao Claudio</h1>
+</div>
+<div class="form">
     <%- include('partials/input') %>
-    <%- include('partials/show') %>
-</body>
-</html>
+</div>
+<%- include('partials/footer')%>
+
+<style>
+    .principal {
+        width: auto;
+        height: auto;
+        background: cornflowerblue;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+
+    .form {
+        width: auto;
+        height: 200px;
+        background: cornflowerblue;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+</style>
