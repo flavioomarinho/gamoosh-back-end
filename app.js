@@ -45,6 +45,7 @@ app.post('/login', (req, res) => {
 app.post('/input', (req, res) => {
     let { name } = req.body
     Auth.inputData(name)
+    res.redirect('/')
 })
 
 app.get('/dashboard', function (req, res) {
