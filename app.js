@@ -9,6 +9,7 @@ const { EWOULDBLOCK } = require('constants');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
+var arrayProdutos = [];
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(publicDir));
@@ -50,7 +51,12 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    res.send(req.body)
+    var produto = req.body;
+    arrayProdutos.push(produto);
+    for (let index = 0; index < arrayProdutos.length; index++) {
+     console.log(arrayProdutos)
+    }
+    res.send(arrayProdutos[0])
     })
 
 
