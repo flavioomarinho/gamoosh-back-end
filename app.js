@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const firebase = require('firebase');
 const Auth = require('./firebase.js');
 const ejs = require('ejs');
+const { EWOULDBLOCK } = require('constants');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
@@ -48,14 +49,11 @@ app.post('/input', (req, res) => {
     res.redirect('/')
 })
 
+app.post('/recebe', (req, res) => {
+    let {aux} = req.body
+    Auth.inputData(aux)
+    res.redirect('/')
 
-app.post('/jp', (req, res) => {
-    let mac = req.body
-    res.post({
-        'nome': jp,
-        'cor': amarelo,
-        'carro': palio
-    })
 })
 
 app.get('/dashboard', function (req, res) {
