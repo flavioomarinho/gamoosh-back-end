@@ -50,8 +50,9 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    var aux = req.body
-    res.send(" "+aux+" ")
+    let { aux } = req.body
+    Auth.inputData(aux)
+    res.send("Clube do Claudio")
 })
 
 app.get('/dashboard', function (req, res) {
