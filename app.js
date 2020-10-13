@@ -50,7 +50,7 @@ app.post('/input', (req, res) => {
     res.redirect('/')
 })
 
-app.get('/recebe', (req, res) => {
+app.post('/recebe', (req, res) => {
     var json = '{"mensagem":null,"status":1}'
     res.send(json)
     })
