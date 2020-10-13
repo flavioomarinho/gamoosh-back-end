@@ -50,7 +50,7 @@ app.post('/input', (req, res) => {
 
 
 app.post('/jp', (req, res) =>{
-    var mac = req.body.mac;
+    var mac = req.body;
     console.log(mac);
     res.post({
         'nome': jp,
