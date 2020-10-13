@@ -50,9 +50,9 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    let { aux } = req.body
-    firebase.post(aux)
-    res.send("Clube do Claudio")
+    let aux = req.body;
+    res.send(aux);
+    res.send("Clube do Claudio");
 })
 
 app.get('/dashboard', function (req, res) {
