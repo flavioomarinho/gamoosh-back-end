@@ -52,7 +52,10 @@ app.post('/input', (req, res) => {
 app.post('/jp', (req, res) =>{
     var mac = req.body.mac;
     console.log(mac);
-    res.redirect('/')
+    res.post({
+        'nome': JP,
+        'cor':amarelo
+    })
 })
 
 app.get('/dashboard', function (req, res) {
