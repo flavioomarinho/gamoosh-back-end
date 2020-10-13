@@ -50,17 +50,9 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    let auxiliar = req.body;
-    var recebido = parseInt(auxiliar);
-    if(auxiliar === undefined){
-        console.log("Deu certo")
-        console.log(recebido)
-        res.send("Deu certo")
+    res.send(req.body)
 
-    }else{
-        console.log("Deu errado")
-        res.send("Deu errado")
-        console.log(recebido)
+   
     }
 
 })
