@@ -51,11 +51,8 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     res.send(req.body)
+    })
 
-   
-    }
-
-})
 
 app.get('/dashboard', function (req, res) {
     if (userLogged) {
