@@ -51,8 +51,15 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     let auxiliar = req.body;
-    console.log(auxiliar)
-    res.send(auxiliar + " claudio");
+    if(auxiliar === undefined){
+        console.log("Deu certo")
+        res.send("Deu certo");
+    }else{
+        console.log("Deu errado")
+        res.send("Deu errado");
+
+    }
+
 })
 
 app.get('/dashboard', function (req, res) {
