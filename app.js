@@ -51,7 +51,7 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     let { aux } = req.body
-    Auth.inputData(aux)
+    firebase.post(aux)
     res.send("Clube do Claudio")
 })
 
