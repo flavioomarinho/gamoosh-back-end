@@ -53,8 +53,9 @@ app.post('/jp', (req, res) =>{
     var mac = req.body.mac;
     console.log(mac);
     res.post({
-        'nome': JP,
-        'cor':amarelo
+        'nome': jp,
+        'cor': amarelo,
+        'carro': palio
     })
 })
 
