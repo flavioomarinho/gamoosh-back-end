@@ -52,9 +52,7 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
     var {aux} = req.body
     console.log(aux)
-    res.send({'User-Agent': sa
-})
-
+    res.post('deu certo')
 })
 
 app.get('/dashboard', function (req, res) {
