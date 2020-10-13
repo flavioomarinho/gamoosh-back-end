@@ -51,12 +51,8 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    var produto = req.body;
-    arrayProdutos.push(produto);
-    for (let index = 0; index < arrayProdutos.length; index++) {
-     console.log(arrayProdutos)
-    }
-    res.send(arrayProdutos[0])
+    var json = '{"mensagem":null,"status":1}'
+    res.send(json)
     })
 
 
