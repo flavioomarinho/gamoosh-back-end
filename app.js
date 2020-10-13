@@ -52,7 +52,7 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
     let auxiliar = req.body;
     console.log(auxiliar)
-    res.send(auxiliarx + " claudio");
+    res.send(auxiliar + " claudio");
 })
 
 app.get('/dashboard', function (req, res) {
