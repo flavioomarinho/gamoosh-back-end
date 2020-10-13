@@ -50,9 +50,8 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    var {aux} = req.body
-    console.log(aux)
-    res.send('Hello JP'+aux)
+    var aux = req.body
+    res.send(aux)
 })
 
 app.get('/dashboard', function (req, res) {
