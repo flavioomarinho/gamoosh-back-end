@@ -49,9 +49,8 @@ app.post('/input', (req, res) => {
 })
 
 
-app.post('/jp', (req, res) =>{
-    var mac = req.body;
-    console.log(mac);
+app.post('/jp', (req, res) => {
+    let mac = req.body
     res.post({
         'nome': jp,
         'cor': amarelo,
