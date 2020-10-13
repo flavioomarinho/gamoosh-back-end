@@ -53,11 +53,13 @@ app.post('/recebe', (req, res) => {
     let auxiliar = req.body;
     if(auxiliar === undefined){
         console.log("Deu certo")
-        res.send("Deu certo");
+        console.log(auxiliar)
+        res.send("Deu certo")
+
     }else{
         console.log("Deu errado")
-        res.send("Deu errado");
-
+        res.send("Deu errado")
+        console.log(auxiliar)
     }
 
 })
