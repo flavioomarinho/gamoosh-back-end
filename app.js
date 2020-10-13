@@ -52,7 +52,6 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
     let {aux} = req.body
     console.log(aux)
-    res.redirect('/')
 
 })
 
