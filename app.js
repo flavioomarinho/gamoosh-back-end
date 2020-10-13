@@ -48,6 +48,13 @@ app.post('/input', (req, res) => {
     res.redirect('/')
 })
 
+
+app.post('/jp', (req, res) =>{
+    var mac = req.body.mac;
+    console.log(mac);
+    res.redirect('/')
+})
+
 app.get('/dashboard', function (req, res) {
     if (userLogged) {
         res.render('dashboard');
