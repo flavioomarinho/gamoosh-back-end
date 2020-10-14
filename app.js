@@ -54,8 +54,9 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    resposta = req.body.mac;
-    res.send(resposta);
+    req.body.mac;
+    req.body.telefone;
+    res.send("ok");
 })
 
 
@@ -66,15 +67,16 @@ app.get('/dashboard', function (req, res) {
         res.redirect('/')
     }
 })
-app.get('/home', (req, res)=>{
+
+/**app.get('/home', (req, res)=>{
     res.format({
         html: function(){
-            res.render('home',{mac:resposta});
+            res.render('home',{mac:});
         }
 
     })
 
-})
+})**/
   
 
 
