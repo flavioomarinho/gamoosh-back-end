@@ -61,7 +61,7 @@ app.post('/recebe', (req, res) => {
     mac = req.body.mac;
     status = req.body.status;
     localizacao = req.body.localizacao;
-    erro = req.body.localizacao;
+    erro = req.body.erro;
     calibracao = req.body.calibracao;
     res.send("ok");
 })
