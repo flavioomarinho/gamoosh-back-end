@@ -55,7 +55,6 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
     resposta = req.body;
     res.send(resposta);
-    renderiza();
 })
 
 
@@ -66,19 +65,18 @@ app.get('/dashboard', function (req, res) {
         res.redirect('/')
     }
 })
-
-function renderiza (){
+app.get('/home', (req, res)=>{
     res.format({
         html: function(){
-            array.forEach(resposta => {
-                res.render('home',{mac:'mac'});
-            });
-            
+            res.render('home',{mac:'mac'});
         }
 
     })
 
-}
+})
+  
+
+
 
 
 app.listen(process.env.PORT || 3000)
