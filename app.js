@@ -52,7 +52,9 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    console.log(req.body);
+    var resposta = req.body;
+    console.log(resposta);
+    res.send(resposta);
 })
 
 
