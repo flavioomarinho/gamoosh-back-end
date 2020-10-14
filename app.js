@@ -55,7 +55,6 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     mac = req.body.mac;
-    telefone = req.body.telefone;
     res.send("ok");
 })
 
@@ -72,7 +71,6 @@ app.get('/home', (req, res)=>{
     res.format({
         html: function(){
             res.render('home',{mac:mac});
-            res.render('home',{telefone:telefone});
         }
 
     })
