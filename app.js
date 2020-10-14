@@ -55,6 +55,7 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     mac = req.body.mac;
+    telefone = req.body.telefone;
     res.send("ok");
 })
 
