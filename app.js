@@ -54,7 +54,8 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     resposta = req.body;
-    console.log(resposta);
+    const html = ejs.render('<h1><%= resposta %></h1>', {resposta})
+    console.log(html);
     res.send(resposta);
 })
 
