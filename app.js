@@ -11,6 +11,7 @@ const { REFUSED } = require('dns');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let resposta;
+let teste;
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -54,6 +55,7 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     resposta = req.body;
+    teste = JSON.parse(resposta);
     res.send(resposta);
 })
 
@@ -68,7 +70,7 @@ app.get('/dashboard', function (req, res) {
 app.get('/home', (req, res)=>{
     res.format({
         html: function(){
-            res.render('home',{mac:resposta});
+            res.render('home',{teste});
         }
 
     })
