@@ -15,6 +15,7 @@ let erro;
 let status;
 let localizacao;
 let calibracao;
+let serie;
 
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -58,6 +59,7 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
+    serie = req.body.serie;
     mac = req.body.mac;
     status = req.body.status;
     localizacao = req.body.localizacao;
@@ -79,6 +81,7 @@ app.get('/home', (req, res)=>{
     res.format({
         html: function(){
             res.render('home',{
+                serie:serie,
                 mac:mac,
                 status:status,
                 localizacao:localizacao,
