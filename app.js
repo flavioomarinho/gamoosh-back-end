@@ -6,6 +6,7 @@ const firebase = require('firebase');
 const Auth = require('./firebase.js');
 const ejs = require('ejs');
 const { EWOULDBLOCK } = require('constants');
+const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
@@ -67,7 +68,7 @@ app.get('/dashboard', function (req, res) {
 })
 
 function mostrarTela(){
-    return <div>resposta</div>
+    return resposta
 }
 
 app.listen(process.env.PORT || 3000)
