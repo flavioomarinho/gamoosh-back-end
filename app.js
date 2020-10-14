@@ -51,9 +51,8 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    var json = '{"mensagem":null,"status":1}'
-    res.send(json)
-    })
+    console.log(req.body);
+})
 
 
 app.get('/dashboard', function (req, res) {
