@@ -67,8 +67,5 @@ app.get('/dashboard', function (req, res) {
     }
 })
 
-function mostrarTela(){
-    return <div>resposta</div>
-}
 
 app.listen(process.env.PORT || 3000)
