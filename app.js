@@ -11,7 +11,6 @@ const { REFUSED } = require('dns');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let mac;
-let telefone;
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -55,7 +54,6 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     mac = req.body.mac;
-    telefone = req.body.telefone;
     res.send("ok");
 })
 
