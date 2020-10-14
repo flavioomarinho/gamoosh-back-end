@@ -30,16 +30,6 @@ firebase.auth().onAuthStateChanged((user) => {
 
 app.set('view engine', 'ejs');
 
-app.get('/home',(req,res)=>{
-    res.format({
-        html: function(){
-            res.render('home',{name:'Flavio'});
-        }
-
-    })
-
-})
-
 app.get('/', (req, res) => {
     res.render('index');
 })
@@ -64,7 +54,6 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     resposta = req.body;
-    console.log(html);
     res.send(resposta);
 })
 
@@ -76,6 +65,19 @@ app.get('/dashboard', function (req, res) {
         res.redirect('/')
     }
 })
+
+function renderiza (){
+    res.format({
+        html: function(){
+            array.forEach(resposta => {
+                res.render('home',{mac:'mac'});
+            });
+            
+        }
+
+    })
+
+}
 
 
 app.listen(process.env.PORT || 3000)
