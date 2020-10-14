@@ -64,7 +64,6 @@ app.post('/recebe', (req, res) => {
     erro = req.body.erro;
     calibracao = req.body.calibracao;
     res.send("ok");
-    res.render('/home');
 })
 
 
