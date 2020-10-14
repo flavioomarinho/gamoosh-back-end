@@ -10,7 +10,7 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-var resposta;
+let resposta;
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
