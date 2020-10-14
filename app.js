@@ -12,6 +12,7 @@ var publicDir = require('path').join(__dirname, '/public');
 var arrayProdutos = [];
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(publicDir));
 app.use('/', express.static(__dirname + '/www'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
