@@ -54,7 +54,7 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    resposta = req.body;
+    resposta = req.body.mac;
     res.send(resposta);
 })
 
@@ -69,7 +69,7 @@ app.get('/dashboard', function (req, res) {
 app.get('/home', (req, res)=>{
     res.format({
         html: function(){
-            res.render('home',{mac:resposta.mac});
+            res.render('home',{mac:resposta});
         }
 
     })
