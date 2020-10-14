@@ -1,24 +1,24 @@
 <%- include('partials/header')%>
-<div class="titulo">
+<div>
   <h3>Painel BoxCubo</h3>
 </div>
-<div class="container">
+<div>
 
   <form action="/login" method="POST">
-    <div class="form1">
+    <div>
       <div class="form-group col-md-6">
         <label for="email">Login</label>
         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
           placeholder="@email">
       </div>
     </div>
-    <div class="form2">
+    <div>
       <div class="form-group col-md-6">
         <label for="exampleInputPassword1">Senha</label>
         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="senha">
       </div>
     </div>
-    <div class="botao">
+    <div>
       <div class="modal-footer mt-4">
         <button type="submit" class="btn btn-primary">Logar</button>
       </div>
@@ -26,55 +26,4 @@
   </form>
 </div>
 
-<style>
-  .container {
-    width: auto;
-    height: auto;
-    background: cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
-
-  .titulo {
-    width: auto;
-    height: 200px;
-    background: cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
-
-  .form1 {
-    width: 1920px;
-    height: 100px;
-    background: cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
-
-  .form2 {
-    width: 1920px;
-    height: 100px;
-    background: cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
-
-  .botao {
-    width: auto;
-    height: 200px;
-    background: cornflowerblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
-</style>
 <%- include('partials/footer')%>
