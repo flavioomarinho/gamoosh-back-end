@@ -55,6 +55,7 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
     resposta = req.body;
     res.send(resposta);
+    renderiza();
 })
 
 
