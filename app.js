@@ -68,7 +68,7 @@ app.get('/dashboard', function (req, res) {
 app.get('/home', (req, res)=>{
     res.format({
         html: function(){
-            res.render('home',{mac:resposta.mac});
+            res.render('home',{mac:resposta});
         }
 
     })
