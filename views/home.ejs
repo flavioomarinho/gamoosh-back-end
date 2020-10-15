@@ -10,9 +10,11 @@
 </head>
 
 <body>
+    <div class="flex-titulo">
+    <h1>Painel BoxCubo</h1>
+</div>
     <div class="flex-container">
     <div>
-        <h1>Painel BoxCubo</h1>
         <div class="flex-item">
         <h2> Serie: <%= serie %></h2>
         <h2> Mac: <%= mac %></h2>
@@ -48,26 +50,50 @@
         <h2> Erro: <%= erro %></h2>
         <h2> Calibração: <%= calibracao %></h2>
     </div>
+    <div>
+        <div class="flex-item">
+        <h2> Serie: <%= serie %></h2>
+        <h2> Mac: <%= mac %></h2>
+        <h2> Status: <%= status %></h2>
+        <h2> Localizaçao: <%= localizacao %></h2>
+        <h2> Erro: <%= erro %></h2>
+        <h2> Calibração: <%= calibracao %></h2>
+    </div>
+
 </div>
+
+
 </body>
 </html>
 
 <style>
-.flex-container {
+.flex-titulo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: 3px solid;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+
+  }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: unsafe;
   }
 
 .flex-item {
-    border :1px solid;
+    border :3px solid;
     border-radius: 10px;
     width: 200px;
     padding: 5px;
-    margin: 5px 10px;
+    margin: 5px 2px;
     text-align: initial;
     font-size: x-small;
-    background-color: salmon;
+    background-color: white;
 }
+
 
 </style>
