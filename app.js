@@ -11,11 +11,11 @@ const { load } = require('dotenv/types');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1/**, serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2**/;
+let serie, mac, ip, estado, calibracao, erro, versao, localizacao/**, serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2**/;
 
 let userLogged;
 /**var paramRecebidos=[];**/
-var i=0;
+/**var i=0;**/
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(publicDir));
@@ -82,14 +82,14 @@ if(paramRecebidos[i].serie === 'BC0002'){
 }
     i++;**/
   
-    serie1 = req.body.serie;
-    mac1 = req.body.mac;
-    ip1 = req.body.ip;
-    estado1 = req.body.estado;
-    calibracao1 = req.body.calibracao;
-    localizacao1 = req.body.localizacao;
-    erro1 = req.body.erro;
-    versao1 = req.body.versao;
+    serie = req.body.serie;
+    mac = req.body.mac;
+    ip = req.body.ip;
+    estado = req.body.estado;
+    calibracao = req.body.calibracao;
+    localizacao = req.body.localizacao;
+    erro = req.body.erro;
+    versao = req.body.versao;
     res.send("ok");
 })
 
@@ -106,15 +106,15 @@ app.get('/home', (req, res)=>{
     res.format({
         html: function(){
             res.render('home',{
-                serie1:serie1,
-                mac1:mac1,
-                ip1:ip1,
-                estado1:estado1,
-                calibracao1:calibracao1,
-                localizacao1:localizacao1,
-                calibracao1:calibracao1,
-                erro1:erro1,
-                versao1:versao1
+                serie:serie,
+                mac:mac,
+                ip:ip,
+                estado:estado,
+                calibracao:calibracao,
+                localizacao:localizacao,
+                calibracao:calibracao,
+                erro:erro,
+                versao:versao
                 /**
                 ,
                 serie2:serie2,
