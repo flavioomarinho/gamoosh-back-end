@@ -107,15 +107,24 @@ app.get('/home', (req, res)=>{
     res.format({
         html: function(){
             res.render('home',{
-                serie:serie,
-                mac:mac,
-                ip:ip,
-                estado:estado,
-                calibracao:calibracao,
-                localizacao:localizacao,
-                calibracao:calibracao,
-                erro:erro,
-                versao:versao
+                serie1:serie1,
+                mac1:mac1,
+                ip1:ip1,
+                estado1:estado1,
+                calibracao1:calibracao1,
+                localizacao1:localizacao1,
+                calibracao1:calibracao1,
+                erro1:erro1,
+                versao1:versao1,
+                serie2:serie2,
+                mac2:mac2,
+                ip2:ip2,
+                estado2:estado2,
+                calibracao2:calibracao2,
+                localizacao2:localizacao2,
+                calibracao2:calibracao2,
+                erro2:erro2,
+                versao2:versao2
             });
         }
 
