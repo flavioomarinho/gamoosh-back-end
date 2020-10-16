@@ -1,99 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src='main.js'></script>
+    <title>Painel BoxCubo</title>
 </head>
-
 <body>
-    <div class="flex-titulo">
-    <h1>Painel BoxCubo</h1>
-</div>
-    <div class="flex-container">
-    <div>
-        <div class="flex-item">
-        <h2> Serie: <%= serie %></h2>
-        <h2> Mac: <%= mac %></h2>
-        <h2> Status: <%= status %></h2>
-        <h2> Localizaçao: <%= localizacao %></h2>
-        <h2> Erro: <%= erro %></h2>
-        <h2> Calibração: <%= calibracao %></h2>
+    <div class="content">
+        <table class="rTable">
+            <thead>
+                <tr>
+                    <th>Num. Série</th>
+                    <th>Mac</th>
+                    <th>IP</th>
+                    <th>Estado</th>
+                    <th>Calibração</th>
+                    <th>Localização</th>
+                    <th>Erro</th>
+                    <th>Versão</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= serie %></td>
+                    <td><%= mac %></td>
+                    <td><%= ip %></td>
+                    <td><%= estado %></td>
+                    <td><%= calibracao %></td>
+                    <td><%= localizacao %></td>
+                    <td><%= erro %></td>
+                    <td><%= versao %></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div>
-        <div class="flex-item">
-        <h2> Serie: <%= serie %></h2>
-        <h2> Mac: <%= mac %></h2>
-        <h2> Status: <%= status %></h2>
-        <h2> Localizaçao: <%= localizacao %></h2>
-        <h2> Erro: <%= erro %></h2>
-        <h2> Calibração: <%= calibracao %></h2>
-    </div>
-    <div>
-        <div class="flex-item">
-        <h2> Serie: <%= serie %></h2>
-        <h2> Mac: <%= mac %></h2>
-        <h2> Status: <%= status %></h2>
-        <h2> Localizaçao: <%= localizacao %></h2>
-        <h2> Erro: <%= erro %></h2>
-        <h2> Calibração: <%= calibracao %></h2>
-    </div>
-    <div>
-        <div class="flex-item">
-        <h2> Serie: <%= serie %></h2>
-        <h2> Mac: <%= mac %></h2>
-        <h2> Status: <%= status %></h2>
-        <h2> Localizaçao: <%= localizacao %></h2>
-        <h2> Erro: <%= erro %></h2>
-        <h2> Calibração: <%= calibracao %></h2>
-    </div>
-    <div>
-        <div class="flex-item">
-        <h2> Serie: <%= serie %></h2>
-        <h2> Mac: <%= mac %></h2>
-        <h2> Status: <%= status %></h2>
-        <h2> Localizaçao: <%= localizacao %></h2>
-        <h2> Erro: <%= erro %></h2>
-        <h2> Calibração: <%= calibracao %></h2>
-    </div>
-
-</div>
-
-
 </body>
 </html>
 
 <style>
-.flex-titulo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 3px solid;
-    border-radius: 10px;
-    background-color: black;
-    color: white;
+    *{margin: 0; padding: 0; box-sizing: border-box;}
 
-  }
+.content{display: flex;margin: auto;}
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: unsafe;
-  }
+.rTable{width: 100%; text-align: center;}
 
-.flex-item {
-    border :3px solid;
-    border-radius: 10px;
-    width: 200px;
-    padding: 5px;
-    margin: 5px 2px;
-    text-align: initial;
-    font-size: x-small;
-    background-color: white;
+    .rTable thead{background: black; font-weight: bold; color: #fff;}
+    .rTable tbody tr:nth-child(2n){background: #ccc;}
+
+@media screen and (max-width: 480px){
+
+
 }
 
+@media only screen and (min-width: 1200px){
+    .content{width: 100%;}
 
+    .rTable tbody tr td:nth-child(1){width: 10%;} 
+    .rTable tbody tr td:nth-child(2){width: 15%;} 
+    .rTable tbody tr td:nth-child(3){width: 15%;} 
+    .rTable tbody tr td:nth-child(4){width: 10%;} 
+    .rTable tbody tr td:nth-child(5){width: 10%;} 
+    .rTable tbody tr td:nth-child(6){width: 20%;} 
+    .rTable tbody tr td:nth-child(7){width: 10%;} 
+    .rTable tbody tr td:nth-child(8){width: 10%;} 
+
+}
 </style>

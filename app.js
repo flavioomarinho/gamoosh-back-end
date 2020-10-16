@@ -10,12 +10,7 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let mac;
-let erro;
-let status;
-let localizacao;
-let calibracao;
-let serie;
+let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -59,13 +54,15 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    
-    mac = req.body.mac;
+      
     serie = req.body.serie;
-    status = req.body.status;
+    mac = req.body.mac;
+    ip = req.body.ip;
+    estado = req.body.estado;
+    calibracao = req.body.calibracao;
     localizacao = req.body.localizacao;
     erro = req.body.erro;
-    calibracao = req.body.calibracao;
+    versao = req.body.versao;
     res.send("ok");
 })
 
@@ -82,14 +79,15 @@ app.get('/home', (req, res)=>{
     res.format({
         html: function(){
             res.render('home',{
-                
-                mac:mac,
                 serie:serie,
-                status:status,
+                mac:mac,
+                ip:ip,
+                estado:estado,
+                calibracao:calibracao,
                 localizacao:localizacao,
+                calibracao:calibracao,
                 erro:erro,
-                calibracao:calibracao
-
+                versao:versao
             });
         }
 
