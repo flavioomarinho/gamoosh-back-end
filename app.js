@@ -11,10 +11,10 @@ const { load } = require('dotenv/types');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1/**, serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2**/;
+let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1, serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2;
 
 let userLogged;
-/**var paramRecebidos=[];**/
+var paramRecebidos=[];
 var i=0;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -57,7 +57,6 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    /**
     paramRecebidos[i] = req.body;
     if(paramRecebidos[i].serie === 'BC0001'){ 
         serie1 = paramRecebidos[i].serie;
@@ -80,16 +79,16 @@ if(paramRecebidos[i].serie === 'BC0002'){
     erro2 = paramRecebidos[i].erro;
     versao2 = paramRecebidos[i].versao;
 }
-    i++;**/
-  
-    serie1 = req.body.serie;
-    mac1 = req.body.mac;
-    ip1 = req.body.ip;
-    estado1 = req.body.estado;
-    calibracao1 = req.body.calibracao;
-    localizacao1 = req.body.localizacao;
-    erro1 = req.body.erro;
-    versao1 = req.body.versao;
+    i++;
+    /**  
+    serie = req.body.serie;
+    mac = req.body.mac;
+    ip = req.body.ip;
+    estado = req.body.estado;
+    calibracao = req.body.calibracao;
+    localizacao = req.body.localizacao;
+    erro = req.body.erro;
+    versao = req.body.versao;**/
     res.send("ok");
 })
 
@@ -114,9 +113,7 @@ app.get('/home', (req, res)=>{
                 localizacao1:localizacao1,
                 calibracao1:calibracao1,
                 erro1:erro1,
-                versao1:versao1
-                /**
-                ,
+                versao1:versao1,
                 serie2:serie2,
                 mac2:mac2,
                 ip2:ip2,
@@ -126,7 +123,6 @@ app.get('/home', (req, res)=>{
                 calibracao2:calibracao2,
                 erro2:erro2,
                 versao2:versao2
-                **/
             });
         }
 
