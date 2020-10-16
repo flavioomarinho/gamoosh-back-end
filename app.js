@@ -66,7 +66,8 @@ app.post('/recebe', (req, res) => {
     localizacao = req.body.localizacao;
     erro = req.body.erro;
     versao = req.body.versao;
-    }else if(req.body.serie === 'BC00076'){
+    }
+    if(req.body.serie === 'BC00076'){
     serie1 = req.body.serie;
     mac1 = req.body.mac;
     ip1 = req.body.ip;
@@ -75,8 +76,8 @@ app.post('/recebe', (req, res) => {
     localizacao1 = req.body.localizacao;
     erro1 = req.body.erro;
     versao1 = req.body.versao;
-    
-    }else if (req.body.serie === 'BC00056'){
+    } 
+    if (req.body.serie === 'BC00056'){
     serie2 = req.body.serie;
     mac2 = req.body.mac;
     ip2 = req.body.ip;
@@ -85,7 +86,8 @@ app.post('/recebe', (req, res) => {
     localizacao2 = req.body.localizacao;
     erro2 = req.body.erro;
     versao2 = req.body.versao;
-    }else if(req.body.serie === 'BC00019'){
+    }
+    if(req.body.serie === 'BC00019'){
     serie3 = req.body.serie;
     mac3 = req.body.mac;
     ip3 = req.body.ip;
@@ -95,7 +97,7 @@ app.post('/recebe', (req, res) => {
     erro3 = req.body.erro;
     versao3 = req.body.versao;
     }
-    }
+    
     res.send("ok");
 })
 
