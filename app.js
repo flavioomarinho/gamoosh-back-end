@@ -13,6 +13,8 @@ var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 
 let userLogged;
+var paramRecebidos=[];
+var i=0;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(publicDir));
@@ -54,7 +56,11 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-      
+
+    paramRecebidos[i] = req.body;
+    console.log(paramRecebidos[1].serie)    
+    i++;
+    /**  
     serie = req.body.serie;
     mac = req.body.mac;
     ip = req.body.ip;
@@ -62,7 +68,7 @@ app.post('/recebe', (req, res) => {
     calibracao = req.body.calibracao;
     localizacao = req.body.localizacao;
     erro = req.body.erro;
-    versao = req.body.versao;
+    versao = req.body.versao;**/
     res.send("ok");
 })
 
