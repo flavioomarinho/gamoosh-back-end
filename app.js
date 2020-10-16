@@ -58,6 +58,7 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
     paramRecebidos[i] = req.body;
+    console.log(paramRecebidos[i].serie);
     if(paramRecebidos[i].serie === 'BC0001'){ 
         serie1 = paramRecebidos[i].serie;
         mac1 = paramRecebidos[i].mac;
@@ -67,8 +68,7 @@ app.post('/recebe', (req, res) => {
         localizacao1 = paramRecebidos[i].localizacao;
         erro1 = paramRecebidos[i].erro;
         versao1 = paramRecebidos[i].versao;
-}
-if(paramRecebidos[i].serie === 'BC0002'){
+}else if(paramRecebidos[i].serie === 'BC0002'){
 
     serie2 = paramRecebidos[i].serie;
     mac2 = paramRecebidos[i].mac;
@@ -78,6 +78,8 @@ if(paramRecebidos[i].serie === 'BC0002'){
     localizacao2 = paramRecebidos[i].localizacao;
     erro2 = paramRecebidos[i].erro;
     versao2 = paramRecebidos[i].versao;
+
+
 }
     i++;
     /**  
