@@ -7,10 +7,11 @@ const Auth = require('./firebase.js');
 const ejs = require('ejs');
 const { EWOULDBLOCK } = require('constants');
 const { REFUSED } = require('dns');
+const { load } = require('dotenv/types');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let body, serie, mac, ip, estado, calibracao, erro, versao, localizacao;
+let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1, serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2;
 
 let userLogged;
 var paramRecebidos=[];
@@ -58,10 +59,27 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
     paramRecebidos[i] = req.body;
     console.log(paramRecebidos[i].serie);
-    if(i>4){ 
-    console.log(paramRecebidos[0].serie); 
-    console.log(paramRecebidos[1].serie); 
-    console.log(paramRecebidos[2].serie); 
+    if(paramRecebidos[i].serie === 'BC0001'){ 
+        serie1 = paramRecebidos[i].serie;
+        mac1 = paramRecebidos[i].mac;
+        ip1 = paramRecebidos[i].ip;
+        estado1 = paramRecebidos[i].estado;
+        calibracao1 = paramRecebidos[i].calibracao;
+        localizacao1 = paramRecebidos[i].localizacao;
+        erro1 = paramRecebidos[i].erro;
+        versao1 = paramRecebidos[i].versao;
+}else if(paramRecebidos[i].serie === 'BC0002'){
+
+    serie2 = paramRecebidos[i].serie;
+    mac2 = paramRecebidos[i].mac;
+    ip2 = paramRecebidos[i].ip;
+    estado2 = paramRecebidos[i].estado;
+    calibracao2 = paramRecebidos[i].calibracao;
+    localizacao2 = paramRecebidos[i].localizacao;
+    erro2 = paramRecebidos[i].erro;
+    versao2 = paramRecebidos[i].versao;
+
+
 }
     i++;
     /**  
