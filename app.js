@@ -58,7 +58,7 @@ app.post('/input', (req, res) => {
 app.post('/recebe', (req, res) => {
 
     paramRecebidos[i] = req.body;
-    console.log(paramRecebidos[1])    
+    console.log(paramRecebidos[1].body.serie)    
     i++;
     /**  
     serie = req.body.serie;
