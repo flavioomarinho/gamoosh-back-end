@@ -10,7 +10,7 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
+let body, serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 
 let userLogged;
 var paramRecebidos=[];
@@ -57,9 +57,9 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
 
-    paramRecebidos[i] = req;
-    serie = paramRecebidos[1];
-    console.log(serie.serie); 
+    paramRecebidos[i] = req.body;
+    body = paramRecebidos[1];
+    console.log(body.serie); 
     i++;
     /**  
     serie = req.body.serie;
