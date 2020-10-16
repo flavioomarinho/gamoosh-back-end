@@ -12,7 +12,8 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
-
+let serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2;
+let serie3, mac3, ip3, estado3, calibracao3, erro3, versao3, localizacao3;
 let userLogged;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -56,7 +57,7 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
 
-    if(req.body.serie === 'BC00019'){
+    if(req.body.serie === 'BC10000'){
     serie = req.body.serie;
     mac = req.body.mac;
     ip = req.body.ip;
@@ -65,7 +66,7 @@ app.post('/recebe', (req, res) => {
     localizacao = req.body.localizacao;
     erro = req.body.erro;
     versao = req.body.versao;
-    }else{
+    }else if(req.body.serie === 'BC00076'){
     serie1 = req.body.serie;
     mac1 = req.body.mac;
     ip1 = req.body.ip;
@@ -74,6 +75,26 @@ app.post('/recebe', (req, res) => {
     localizacao1 = req.body.localizacao;
     erro1 = req.body.erro;
     versao1 = req.body.versao;
+    
+    }else if (req.body.serie === 'BC00056'){
+    serie2 = req.body.serie;
+    mac2 = req.body.mac;
+    ip2 = req.body.ip;
+    estado2 = req.body.estado;
+    calibracao2 = req.body.calibracao;
+    localizacao2 = req.body.localizacao;
+    erro2 = req.body.erro;
+    versao2 = req.body.versao;
+    }else if(req.body.serie === 'BC00019'){
+    serie3 = req.body.serie;
+    mac3 = req.body.mac;
+    ip3 = req.body.ip;
+    estado3 = req.body.estado;
+    calibracao3 = req.body.calibracao;
+    localizacao3 = req.body.localizacao;
+    erro3 = req.body.erro;
+    versao3 = req.body.versao;
+    }
     }
     res.send("ok");
 })
@@ -109,7 +130,27 @@ app.get('/home', (req, res)=>{
                 localizacao1:localizacao1,
                 calibracao1:calibracao1,
                 erro1:erro1,
-                versao1:versao1
+                versao1:versao1,
+
+                serie2:serie2,
+                mac2:mac2,
+                ip2:ip2,
+                estado2:estado2,
+                calibracao2:calibracao2,
+                localizacao2:localizacao2,
+                calibracao2:calibracao2,
+                erro2:erro2,
+                versao2:versao2,
+
+                serie3:serie3,
+                mac3:mac3,
+                ip3:ip3,
+                estado3:estado3,
+                calibracao3:calibracao3,
+                localizacao3:localizacao3,
+                calibracao3:calibracao3,
+                erro3:erro3,
+                versao3:versao3
             });
         }
 
