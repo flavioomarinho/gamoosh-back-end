@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Painel BoxCubo</title>
+</head>
+<body>
+    <h1>Painel BoxCubo</h1>
+    <table>
+        <thead>
+            <th>Serie</th>
+            <th>Mac</th>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i < list.length; i++) { %>
+                <tr>
+                    <td><%= list[i].serie %></td>
+                    <td><%= list[i].mac %></td>
+                </tr>
+            <% } %>
+        <tbody>
+    </table>
+</body>
+</html>
+
+<style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+.content{display: flex;margin: auto;}
+
+.rTable{width: 100%; text-align: center;}
+
+    .rTable thead{background: black; font-weight: bold; color: #fff;}
+    .rTable tbody tr:nth-child(2n){background: #ccc;}
+
+@media screen and (max-width: 480px){
+
+
+}
+
+@media only screen and (min-width: 1200px){
+    .content{width: 100%;}
+
+    .rTable tbody tr td:nth-child(1){width: 10%;} 
+    .rTable tbody tr td:nth-child(2){width: 15%;} 
+    .rTable tbody tr td:nth-child(3){width: 15%;} 
+    .rTable tbody tr td:nth-child(4){width: 10%;} 
+    .rTable tbody tr td:nth-child(5){width: 10%;} 
+    .rTable tbody tr td:nth-child(6){width: 20%;} 
+    .rTable tbody tr td:nth-child(7){width: 10%;} 
+    .rTable tbody tr td:nth-child(8){width: 10%;} 
+
+}
+</style>
