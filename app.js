@@ -167,7 +167,7 @@ app.get('/home', (req, res)=>{
 app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
-            res.render('home',{
+            res.render('home2',{
                 list:{
                 serie:serie,
                 mac:mac
