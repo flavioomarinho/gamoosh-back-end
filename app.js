@@ -129,6 +129,7 @@ app.get('/home', (req, res)=>{
                 erro:erro,
                 versao:versao,
                 colecao: colecao[0],
+                colecao: colecao[1],
 
                 serie1:serie1,
                 mac1:mac1,
