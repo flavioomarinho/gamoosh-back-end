@@ -8,14 +8,66 @@
     <title>Painel BoxCubo</title>
 </head>
 <body>
-    <% for(var i = 0; i < 10; i++) { %>
-        <tr>
-            <td><%= serie[i] %></td>
-            <td><%= mac[i] %></td>
-        </tr>
-    <% } %>
-
-   </body>
+    <div class="content">
+        <table class="rTable">
+            <thead>
+                <tr>
+                    <th>Num. Série</th>
+                    <th>Mac</th>
+                    <th>IP</th>
+                    <th>Estado</th>
+                    <th>Calibração</th>
+                    <th>Localização</th>
+                    <th>Erro</th>
+                    <th>Versão</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= serie %></td>
+                    <td><%= mac %></td>
+                    <td><%= ip %></td>
+                    <td><%= estado %></td>
+                    <td><%= calibracao %></td>
+                    <td><%= localizacao %></td>
+                    <td><%= erro %></td>
+                    <td><%= versao %></td>
+                </tr>
+                <tr>
+                    <td><%= serie1 %></td>
+                    <td><%= mac1 %></td>
+                    <td><%= ip1 %></td>
+                    <td><%= estado1 %></td>
+                    <td><%= calibracao1 %></td>
+                    <td><%= localizacao1 %></td>
+                    <td><%= erro1 %></td>
+                    <td><%= versao1 %></td>
+                </tr>
+                <tr>
+                    <td><%= serie2 %></td>
+                    <td><%= mac2 %></td>
+                    <td><%= ip2 %></td>
+                    <td><%= estado2 %></td>
+                    <td><%= calibracao2 %></td>
+                    <td><%= localizacao2 %></td>
+                    <td><%= erro2 %></td>
+                    <td><%= versao2 %></td>
+                </tr>
+                <tr>
+                    <td><%= serie3 %></td>
+                    <td><%= mac3 %></td>
+                    <td><%= ip3 %></td>
+                    <td><%= estado3 %></td>
+                    <td><%= calibracao3 %></td>
+                    <td><%= localizacao3 %></td>
+                    <td><%= erro3 %></td>
+                    <td><%= versao3 %></td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>
 
 <style>
