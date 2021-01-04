@@ -15,7 +15,7 @@ let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2;
 let serie3, mac3, ip3, estado3, calibracao3, erro3, versao3, localizacao3;
 let userLogged;
-let list=[];
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -157,22 +157,6 @@ app.get('/home', (req, res)=>{
                 calibracao3:calibracao3,
                 erro3:erro3,
                 versao3:versao3
-            });
-        }
-
-    })
-
-})
-
-app.get('/home2', (req, res)=>{
-    res.format({
-        html: function(){
-            res.render('home2',{
-                list:{
-                serie:serie,
-                mac:mac
-                }
-
             });
         }
 
