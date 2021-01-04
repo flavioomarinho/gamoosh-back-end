@@ -15,7 +15,6 @@ let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let serie2, mac2, ip2, estado2, calibracao2, erro2, versao2, localizacao2;
 let serie3, mac3, ip3, estado3, calibracao3, erro3, versao3, localizacao3;
 let userLogged;
-var colecao = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -70,7 +69,6 @@ app.post('/recebe', (req, res) => {
     localizacao = req.body.localizacao;
     erro = req.body.erro;
     versao = req.body.versao;
-    colecao.push(serie, mac, ip, estado, calibracao, localizacao, erro, versao);
     }
     if(req.body.serie === 'BC00076'){
     serie1 = req.body.serie;
@@ -128,8 +126,6 @@ app.get('/home', (req, res)=>{
                 calibracao:calibracao,
                 erro:erro,
                 versao:versao,
-                colecao: colecao[0],
-                colecao: colecao[1],
 
                 serie1:serie1,
                 mac1:mac1,
