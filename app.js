@@ -68,7 +68,7 @@ app.post('/recebe', (req, res) => {
         erro = req.body.erro;
         versao = req.body.versao;
         localizacao = req.body.localizacao;
-        array.push(serie,mac,ip,estado, calibracao,erro,versao,localizacao);
+        array.push([serie,mac,ip,estado, calibracao,erro,versao,localizacao]);
 
         for(var i =0; array.length;i++){
             console.log(array[i]);
