@@ -10,8 +10,8 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
-let serie1, mac1, ip1,;
+let serie, mac, ip;
+let serie1, mac1, ip1;
 let userLogged;
 
 
@@ -67,13 +67,6 @@ app.post('/recebe', (req, res) => {
         mac1 = req.body.mac;
         ip1 = req.body.ip;
     }
-   // estado = req.body.estado;
-  //  calibracao = req.body.calibracao;
-   // localizacao = req.body.localizacao;
-  //  erro = req.body.erro;
-  //  versao = req.body.versao;
-    //}
- 
     res.send("ok");
 })
 
