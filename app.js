@@ -109,14 +109,14 @@ app.get('/home2', (req, res)=>{
              versao:versao,
              localizacao:localizacao,
 
-     //        serie1:serie1,
-    //         mac1:mac1,
-      //       ip1:ip1,
-      //       estado1:estado1,
-       //      calibracao1:calibracao1,
-        //     erro1:erro1,
-        //     versao1:versao1,
-       //      localizacao1:localizacao1,
+             serie1:serie1,
+             mac1:mac1,
+            ip1:ip1,
+           estado1:estado1,
+            calibracao1:calibracao1,
+            erro1:erro1,
+            versao1:versao1,
+             localizacao1:localizacao1,
                            
             });
         }
