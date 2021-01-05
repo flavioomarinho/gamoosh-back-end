@@ -123,7 +123,7 @@ app.get('/home2', (req, res)=>{
 
     })
 
-    for(var i =0; i < array.length;i++){
+    for(var i =0; i < 5;i++){
         console.log(array[i]);
     }
 
