@@ -27,10 +27,10 @@
 </table>
 
 <script>
-	var myArray = ['<%= array %>'] //[
-	   // {'serie':'<%= serie %>', 'mac':'<%= mac %>', 'ip':'<%= ip %>', 'estado':'<%= estado %>', 'calibracao':'<%= calibracao %>', 'erro':'<%= erro %>', 'versao':'<%= versao %>','localizacao':'<%= localizacao %>'},
-	  //  {'serie':'<%= serie1 %>', 'mac':'<%= mac1 %>', 'ip':'<%= ip1 %>', 'estado':'<%= estado1 %>', 'calibracao':'<%= calibracao1 %>', 'erro':'<%= erro1 %>', 'versao':'<%= versao1 %>','localizacao':'<%= localizacao1 %>'},
-//	]//
+	var myArray = [
+	    {'array':'<%= array %>','serie':'<%= serie %>', 'mac':'<%= mac %>', 'ip':'<%= ip %>', 'estado':'<%= estado %>', 'calibracao':'<%= calibracao %>', 'erro':'<%= erro %>', 'versao':'<%= versao %>','localizacao':'<%= localizacao %>'},
+	   
+	]
 	
 	buildTable(myArray)
 
@@ -41,6 +41,7 @@
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
+							<td>${data[i].array}</td>				
 							<td>${data[i].serie}</td>
 							<td>${data[i].mac}</td>
 							<td>${data[i].ip}</td>
