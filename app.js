@@ -99,8 +99,9 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-            
-             serie:array.slice(0,1),
+        
+            myArray:array[0],   
+             serie:serie,
              mac:mac,
              ip:ip,
              estado:estado,
