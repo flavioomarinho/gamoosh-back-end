@@ -11,7 +11,7 @@ const { REFUSED } = require('dns');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
-let serie1, mac1, ip1, estado, calibracao, erro, versao, localizacao;
+let serie1, mac1, ip1,;
 let userLogged;
 
 
