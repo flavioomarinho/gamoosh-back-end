@@ -11,6 +11,7 @@ const { REFUSED } = require('dns');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
+let serie1, mac1, ip1, estado, calibracao, erro, versao, localizacao;
 let userLogged;
 
 
@@ -55,12 +56,17 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-  //  if(req.body.serie === 'BC10000'){
+    if(req.body.serie === 'BC10000'){
+        serie = req.body.serie;
+        mac = req.body.mac;
+        ip = req.body.ip;
+    }
 
-      
-    serie = req.body.serie;
-   mac = req.body.mac;
-   ip = req.body.ip;
+    if(req.body.serie === 'BC00076'){
+        serie1 = req.body.serie;
+        mac1 = req.body.mac;
+        ip1 = req.body.ip;
+    }
    // estado = req.body.estado;
   //  calibracao = req.body.calibracao;
    // localizacao = req.body.localizacao;
@@ -88,6 +94,10 @@ app.get('/home2', (req, res)=>{
              serie:serie,
              mac:mac,
              ip:ip,
+
+             serie1:serie1,
+             mac1:mac1,
+             ip1:ip1,
                            
             });
         }
