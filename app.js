@@ -100,7 +100,7 @@ app.get('/home2', (req, res)=>{
         html: function(){
             res.render('home2',{
         
-            myArray:array[0],   
+            myArray:array,   
              serie:serie,
              mac:mac,
              ip:ip,
