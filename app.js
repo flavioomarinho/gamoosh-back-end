@@ -13,7 +13,7 @@ var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let userLogged;
-
+var array = [];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -56,7 +56,10 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    if(req.body.serie === 'BC10000'){
+
+
+
+   // if(req.body.serie === 'BC10000'){
         serie = req.body.serie;
         mac = req.body.mac;
         ip = req.body.ip;
@@ -65,17 +68,22 @@ app.post('/recebe', (req, res) => {
         erro = req.body.erro;
         versao = req.body.versao;
         localizacao = req.body.localizacao;
-    }
+        array.push(serie,mac,ip,estado, calibracao,erro,versao,localizacao);
 
-    if(req.body.serie === 'BC00076'){
-        serie1 = req.body.serie;
+        for(var i =0; array.length;i++){
+            console.log(array[i]);
+        }
+         //}
+
+   if(req.body.serie === 'BC00076'){
+       serie1 = req.body.serie;
         mac1 = req.body.mac;
-        ip1 = req.body.ip;
+      ip1 = req.body.ip;
         estado1 = req.body.estado;
-        calibracao1 = req.body.calibracao;
-        erro1 = req.body.erro;
+       calibracao1 = req.body.calibracao;
+       erro1 = req.body.erro;
         versao1 = req.body.versao;
-        localizacao1 = req.body.localizacao;
+       localizacao1 = req.body.localizacao;
     }
     res.send("ok");
 })
