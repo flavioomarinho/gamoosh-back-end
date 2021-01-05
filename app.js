@@ -70,9 +70,7 @@ app.post('/recebe', (req, res) => {
         localizacao = req.body.localizacao;
         array.push([serie,mac,ip,estado, calibracao,erro,versao,localizacao]);
 
-        for(var i =0; array.length;i++){
-            console.log(array[i]);
-        }
+
     }
 
   //* if(req.body.serie === 'BC00076'){
@@ -124,6 +122,10 @@ app.get('/home2', (req, res)=>{
         }
 
     })
+
+    for(var i =0; array.length;i++){
+        console.log(array[i]);
+    }
 
 })
 
