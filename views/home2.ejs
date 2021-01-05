@@ -13,7 +13,12 @@
     <tr  class="bg-info">
         <th>Serie</th>
         <th>Mac</th>
-        <th>Ip</th>
+		<th>Ip</th>
+		<th>Estado</th>
+		<th>Calibração</th>
+		<th>Erro</th>
+		<th>Versão</th>
+		<th>Localização</th>
     </tr>
 
     <tbody id="myTable">
@@ -23,8 +28,8 @@
 
 <script>
 	var myArray = [
-	    {'serie':'<%= serie %>', 'mac':'<%= mac %>', 'ip':'<%= ip %>'},
-		{'serie':'<%= serie1 %>', 'mac':'<%= mac1 %>', 'ip':'<%= ip1 %>'},
+	    {'serie':'<%= serie %>', 'mac':'<%= mac %>', 'ip':'<%= ip %>', 'estado':'<%= estado %>', 'calibracao':'<%= calibracao %>', 'erro':'<%= erro %>', 'versao':'<%= versao %>','localizacao':'<%= localizacao %>'},
+	    {'serie':'<%= serie1 %>', 'mac':'<%= mac1 %>', 'ip':'<%= ip1 %>', 'estado':'<%= estado1 %>', 'calibracao':'<%= calibracao1 %>', 'erro':'<%= erro1 %>', 'versao':'<%= versao1 %>','localizacao':'<%= localizacao1 %>'},
 	]
 	
 	buildTable(myArray)
@@ -39,10 +44,13 @@
 							<td>${data[i].serie}</td>
 							<td>${data[i].mac}</td>
 							<td>${data[i].ip}</td>
+							<td>${data[i].estado}</td>
+							<td>${data[i].calibracao}</td>
+							<td>${data[i].erro}</td>
+							<td>${data[i].versao}</td>
+							<td>${data[i].localizacao}</td>
 					  </tr>`
 			table.innerHTML += row
-
-
 		}
 	}
 
