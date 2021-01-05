@@ -11,6 +11,7 @@
 
 <table class="table table-striped">
     <tr  class="bg-info">
+		<th>Serie1</th>
         <th>Serie</th>
         <th>Mac</th>
 		<th>Ip</th>
@@ -41,7 +42,7 @@
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
-							<td>${data[i].array}</td>				
+							<td>${data[i].array.serie}</td>				
 							<td>${data[i].serie}</td>
 							<td>${data[i].mac}</td>
 							<td>${data[i].ip}</td>
