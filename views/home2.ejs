@@ -27,7 +27,10 @@
 </table>
 
 <script>
-
+	var myArray = [
+	    {'array':'<%= array %>'}
+	   
+	]
 	
 	buildTable(myArray)
 
@@ -38,7 +41,7 @@
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
-							<td>${data[i].objeto.serie}</td>
+							<td>${data[i].array[i].objeto.serie}</td>				
 							<td>${data[i].mac}</td>
 							<td>${data[i].ip}</td>
 							<td>${data[i].estado}</td>
