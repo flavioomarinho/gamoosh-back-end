@@ -13,7 +13,8 @@ var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let userLogged;
-
+var objeto ={};
+var arrayObjeto =[];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -56,8 +57,21 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
+   
+        objeto = {
+        serie: req.body.serie,
+        mac: req.body.mac
+    }
+
+    arrayObjeto.push(objeto);
+    for(var i =0; i<arrayObjeto.length;i++){
+
+        console.log(arrayObjeto[i])
 
 
+    }
+    
+/*
 
     if(req.body.serie === 'BC10000'){
         serie = req.body.serie;
@@ -74,14 +88,14 @@ app.post('/recebe', (req, res) => {
 
    if(req.body.serie === 'BC00076'){
        serie1 = req.body.serie;
-        mac1 = req.body.mac;
-      ip1 = req.body.ip;
-        estado1 = req.body.estado;
+       mac1 = req.body.mac;
+       ip1 = req.body.ip;
+       estado1 = req.body.estado;
        calibracao1 = req.body.calibracao;
        erro1 = req.body.erro;
-        versao1 = req.body.versao;
+       versao1 = req.body.versao;
        localizacao1 = req.body.localizacao;
-    }
+    }*/
     res.send("ok");
 })
 
