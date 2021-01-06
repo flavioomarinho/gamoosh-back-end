@@ -57,9 +57,9 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-        serie = req.body.serie
+        serie1 = req.body.serie
         objeto = {
-        serie: serie ,
+        serie: serie1 ,
         mac: req.body.mac
     }
 
