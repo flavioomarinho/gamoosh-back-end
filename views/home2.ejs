@@ -28,7 +28,7 @@
 
 <script>
 	var myArray = [
-	    {'serie':'<%= serie %>'},
+	    {'obj':'<%= serie %>'},
 	   
 	]
 	
@@ -41,7 +41,7 @@
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
-							<td>${data[i].serie.mac}</td>
+							<td>${data[i].obj.serie.mac}</td>
 		
 					  </tr>`
 			table.innerHTML += row
