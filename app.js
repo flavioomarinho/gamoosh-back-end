@@ -100,7 +100,7 @@ app.get('/home2', (req, res)=>{
         html: function(){
             res.render('home2',{
         
-            array:array[0],    
+            array:array,    
             });
         }
 
