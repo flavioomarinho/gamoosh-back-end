@@ -72,16 +72,16 @@ app.post('/recebe', (req, res) => {
 
    }
 
-  //* if(req.body.serie === 'BC00076'){
-     //  serie1 = req.body.serie;
-       // mac1 = req.body.mac;
-    //  ip1 = req.body.ip;
-     //   estado1 = req.body.estado;
-     //  calibracao1 = req.body.calibracao;
-      // erro1 = req.body.erro;
-      //  versao1 = req.body.versao;
-      // localizacao1 = req.body.localizacao;
-   // }
+   if(req.body.serie === 'BC00076'){
+       serie1 = req.body.serie;
+        mac1 = req.body.mac;
+      ip1 = req.body.ip;
+        estado1 = req.body.estado;
+       calibracao1 = req.body.calibracao;
+       erro1 = req.body.erro;
+        versao1 = req.body.versao;
+       localizacao1 = req.body.localizacao;
+    }
     res.send("ok");
 })
 
