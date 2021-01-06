@@ -12,6 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 //let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 //let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
+
 let userLogged;
 var array =[];
 var objeto ={};
@@ -100,7 +101,7 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                array  
+                array:array[0]  
                            
             });
         }
