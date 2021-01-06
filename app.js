@@ -13,7 +13,7 @@ var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
 let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let userLogged;
-var objeto ={};
+var objeto = new Object();
 var arrayObjeto =[];
 
 app.use(bodyParser.urlencoded({ extended: true }));
