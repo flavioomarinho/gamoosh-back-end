@@ -10,12 +10,9 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-//let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
-//let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
-
+let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
+let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let userLogged;
-var array =[];
-var objeto ={};
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -59,18 +56,19 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-        objeto = {
-            serie:req.body.serie,
-            mac:req.body.mac,
-            ip:req.body.ip,
-            estado:req.body.estado,
-            calibracao:req.body.calibracao,
-            erro:req.body.erro,
-            versao:req.body.versao,
-            localizacao:req.body.localizacao
-        }
 
-        array.push(objeto);
+
+
+   // if(req.body.serie === 'BC10000'){
+        serie = req.body.serie;
+        mac = req.body.mac;
+        ip = req.body.ip;
+        estado = req.body.estado;
+        calibracao = req.body.calibracao;
+        erro = req.body.erro;
+        versao = req.body.versao;
+        localizacao = req.body.localizacao;
+        array.push([serie,mac,ip,estado, calibracao,erro,versao,localizacao]);
 
 
  //   }
@@ -101,14 +99,34 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                array:array  
+        
+             serie:serie,
+             mac:mac,
+             ip:ip,
+             estado:estado,
+             calibracao:calibracao,
+             erro:erro,
+             versao:versao,
+             localizacao:localizacao,
+
+             serie1:serie1,
+             mac1:mac1,
+            ip1:ip1,
+           estado1:estado1,
+            calibracao1:calibracao1,
+            erro1:erro1,
+            versao1:versao1,
+             localizacao1:localizacao1,
                            
             });
         }
 
     })
 
-   
+    for(var i =0; i < array.length;i++){
+        console.log(array[i]);
+    }
+
 })
 
   app.listen(process.env.PORT || 3000)
