@@ -28,21 +28,12 @@
 </table>
 
 <script>
-	var myArray = [
-	    {'array':'<%= array %>','serie':'<%= serie %>', 'mac':'<%= mac %>', 'ip':'<%= ip %>', 'estado':'<%= estado %>', 'calibracao':'<%= calibracao %>', 'erro':'<%= erro %>', 'versao':'<%= versao %>','localizacao':'<%= localizacao %>'},
-	   
-	]
-	
-	buildTable(myArray)
-
-
-
+	buildTable(array)
 	function buildTable(data){
 		var table = document.getElementById('myTable')
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
-							<td>${data[i].array[i]}</td>				
 							<td>${data[i].serie}</td>
 							<td>${data[i].mac}</td>
 							<td>${data[i].ip}</td>

@@ -100,25 +100,7 @@ app.get('/home2', (req, res)=>{
         html: function(){
             res.render('home2',{
         
-            array:array,   
-             serie:serie,
-             mac:mac,
-             ip:ip,
-             estado:estado,
-             calibracao:calibracao,
-             erro:erro,
-             versao:versao,
-             localizacao:localizacao,
-
-             serie1:serie1,
-             mac1:mac1,
-            ip1:ip1,
-           estado1:estado1,
-            calibracao1:calibracao1,
-            erro1:erro1,
-            versao1:versao1,
-             localizacao1:localizacao1,
-                           
+            array:array[0],    
             });
         }
 
