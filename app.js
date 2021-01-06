@@ -112,8 +112,8 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-        
-             serie:serie,
+                serie: arrayObjeto
+        /*     serie:serie,
              mac:mac,
              ip:ip,
              estado:estado,
@@ -130,7 +130,7 @@ app.get('/home2', (req, res)=>{
             erro1:erro1,
             versao1:versao1,
              localizacao1:localizacao1,
-                           
+                           */
             });
         }
 
