@@ -99,7 +99,7 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                myarray:array[0]   
+                myArray:array   
                            
             });
         }
