@@ -28,7 +28,7 @@
 
 <script>
 	var myArray = [
-	    {'serie':'<%= serie %>', 'mac':'<%= mac %>', 'ip':'<%= ip %>', 'estado':'<%= estado %>', 'calibracao':'<%= calibracao %>', 'erro':'<%= erro %>', 'versao':'<%= versao %>','localizacao':'<%= localizacao %>'},
+	    {'serie':'<%= serie %>'},
 	   
 	]
 	
@@ -42,13 +42,7 @@
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
 							<td>${data[i].serie}</td>
-							<td>${data[i].mac}</td>
-							<td>${data[i].ip}</td>
-							<td>${data[i].estado}</td>
-							<td>${data[i].calibracao}</td>
-							<td>${data[i].erro}</td>
-							<td>${data[i].versao}</td>
-							<td>${data[i].localizacao}</td>
+		
 					  </tr>`
 			table.innerHTML += row
 		}
