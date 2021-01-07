@@ -11,10 +11,7 @@ const { REFUSED } = require('dns');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
-let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let userLogged;
-var objeto = new Object();
-var arrayObjeto =[];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -57,11 +54,8 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-        serie1 = req.body.serie
-        objeto = {
-        serie: serie1 ,
-        mac: req.body.mac
-    }
+        serie = req.body.serie
+
 
     arrayObjeto.push(objeto);
     for(var i =0; i<arrayObjeto.length;i++){
@@ -112,7 +106,7 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                arrayObjeto
+                serie:serie
         /*     serie:serie,
              mac:mac,
              ip:ip,
