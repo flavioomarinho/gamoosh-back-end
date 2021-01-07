@@ -67,16 +67,13 @@ app.get('/dashboard', function (req, res) {
     }
 })
 
-app.get('/home2', (req, res)=>{
+app.get('/home2', (req, res) => {
     res.format({
-        html: function(){
-            res.render('home2',{
-                serie
-            });
+        html: function () {
+            res.render('home2', serie);
         }
-
     })
 
 })
 
-  app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000)
