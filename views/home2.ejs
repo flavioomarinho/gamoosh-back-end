@@ -22,9 +22,9 @@
     </tr>
 
     <tbody id="myTable">
-		<% para (var i = 0 ; i < serie . comprimento ; ++ i) { %>
-			<% = serie [ i ] %>
-		<% } %>
+		<% for(var i = 0; i < serie.length; ++ i) { %>
+			<%=serie[i]%>
+		<%}%>
     </tbody>
 </table>
 
