@@ -15,6 +15,7 @@ let serie1, mac1, ip1, estado1, calibracao1, erro1, versao1, localizacao1;
 let userLogged;
 var objeto = new Object();
 var arrayObjeto =[];
+var arrayReq =[];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -57,16 +58,19 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-        serie1 = req.body.serie
+
+    arrayReq.push(req.body);
+
+      /*  serie1 = req.body.serie
         objeto = {
         serie: serie1 ,
-        mac: req.body.mac
-    }
+        mac: req.body.mac*/
+   // }
 
-    arrayObjeto.push(objeto);
-    for(var i =0; i<arrayObjeto.length;i++){
+  //  arrayObjeto.push(objeto);
+    for(var i =0; i<arrayReq.length;i++){
 
-        console.log(arrayObjeto[i])
+        console.log(arrayReq[i])
 
 
     }
