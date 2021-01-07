@@ -112,7 +112,7 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                arrayObjeto
+                serie1
         /*     serie:serie,
              mac:mac,
              ip:ip,
