@@ -29,8 +29,11 @@
 <script>
 	
 	var myArray = [];
-	myArray.push('<%= arrayReq %>');
-	
+
+	for(var i=0;i<5;i++){
+		myArray[i].push('<%= arrayReq[i].serie %>');
+	}
+
 	
 	buildTable(myArray)
 
