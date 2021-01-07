@@ -71,6 +71,7 @@ app.post('/recebe', (req, res) => {
     for(var i =0; i<arrayReq.length;i++){
 
         console.log(arrayReq[i])
+        console.log(arrayReq[i].serie)
 
 
     }
