@@ -70,7 +70,7 @@ app.get('/dashboard', function (req, res) {
 app.get('/home2', (req, res) => {
     res.format({
         html: function () {
-            res.render('home2', serie);
+            res.render('home2', ['teste 1', 'teste 2']);
         }
     })
 
