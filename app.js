@@ -57,13 +57,8 @@ app.post('/recebe', (req, res) => {
         serie = req.body.serie
 
 
-    arrayObjeto.push(objeto);
-    for(var i =0; i<arrayObjeto.length;i++){
+    
 
-        console.log(arrayObjeto[i])
-
-
-    }
     
 /*
 
@@ -106,7 +101,7 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                serie:serie
+                serie
         /*     serie:serie,
              mac:mac,
              ip:ip,
