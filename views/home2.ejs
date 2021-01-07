@@ -29,7 +29,7 @@
 <script>
 	
 	var myArray = [];
-	myArray.push('<%= arrayReq %>');
+	myArray.push('<%= arrayReq.serie %>');
 	
 	
 	buildTable(myArray)
@@ -41,7 +41,7 @@
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
-							<td>${data[i].arrayReq[i]}</td>
+							<td>${data[i]}</td>
 		
 					  </tr>`
 			table.innerHTML += row
