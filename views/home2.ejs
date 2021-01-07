@@ -27,14 +27,10 @@
 </table>
 
 <script>
-	var teste = '<%= arrayReq %>';
-	for (var i = 0; i < teste.length; i++){
-	console.log(teste[i].getElementById('serie'))
-	}
-	var myArray = [
-	    {'obj':'<%= arrayReq %>'},
-	   
-	]
+	
+	var myArray = [];
+	myArray.push('<%= arrayReq %>');
+	
 	
 	buildTable(myArray)
 
