@@ -10,7 +10,7 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie, mac, ip, estado, calibracao, erro, versao, localizacao;
+let serie, serie1;
 let userLogged;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -54,37 +54,16 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-        serie = req.body.serie
-
-
-    
-
-    
-/*
-
+  
     if(req.body.serie === 'BC10000'){
         serie = req.body.serie;
-        mac = req.body.mac;
-        ip = req.body.ip;
-        estado = req.body.estado;
-        calibracao = req.body.calibracao;
-        erro = req.body.erro;
-        versao = req.body.versao;
-        localizacao = req.body.localizacao;
-
-
+       
    }
 
    if(req.body.serie === 'BC00076'){
        serie1 = req.body.serie;
-       mac1 = req.body.mac;
-       ip1 = req.body.ip;
-       estado1 = req.body.estado;
-       calibracao1 = req.body.calibracao;
-       erro1 = req.body.erro;
-       versao1 = req.body.versao;
-       localizacao1 = req.body.localizacao;
-    }*/
+   }
+ 
     res.send("ok");
 })
 
@@ -101,25 +80,9 @@ app.get('/home2', (req, res)=>{
     res.format({
         html: function(){
             res.render('home2',{
-                serie
-        /*     serie:serie,
-             mac:mac,
-             ip:ip,
-             estado:estado,
-             calibracao:calibracao,
-             erro:erro,
-             versao:versao,
-             localizacao:localizacao,
+                serie,
+                serie1
 
-             serie1:serie1,
-             mac1:mac1,
-            ip1:ip1,
-           estado1:estado1,
-            calibracao1:calibracao1,
-            erro1:erro1,
-            versao1:versao1,
-             localizacao1:localizacao1,
-                           */
             });
         }
 
