@@ -28,7 +28,9 @@
 
 <script>
 	var teste = '<%= arrayReq %>';
-	console.log(teste[0].serie)
+	for (var i = 0; i < teste.length; i++){
+	console.log(teste[i])
+	}
 	var myArray = [
 	    {'obj':'<%= arrayReq %>'},
 	   
