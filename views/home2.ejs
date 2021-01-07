@@ -1,4 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -22,7 +22,6 @@
     </tr>
 
     <tbody id="myTable">
-        
     </tbody>
 </table>
 
@@ -47,4 +46,21 @@
 		}
 	}
 
-</script>
+</script> -->
+
+OK, so have fun! :D
+-------------------
+<%
+    var fruits = ["Apple", "Pear", "Orange", "Lemon"]
+      , random = " ".repeat(198).split("").map(x => Math.random())
+      ;
+%>
+
+These fruits are amazing:
+<% for(var i = 0; i < fruits.length; ++i) {%>
+  - <%=fruits[i]%>s<% } %>
+
+Let's see some random numbers:
+
+<% random.forEach((c, i) => {
+%> <%=c.toFixed(10) + ((i + 1) % 6 === 0 ? "\n": "") %><%});%>
