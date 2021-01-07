@@ -10,7 +10,7 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie, serie1 = [];
+let serie = [];
 let userLogged;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -55,15 +55,10 @@ app.post('/input', (req, res) => {
 
 app.post('/recebe', (req, res) => {
   
-    // if(req.body.serie === 'BC10000'){
-        serie.push(req.body.serie);
-       
-//    }
-
-//    if(req.body.serie === 'BC00076'){
-//        serie1 = req.body.serie;
-//    }
- 
+    if (!serie){
+        serie = [];
+    }
+    serie.push(req.body.serie);
     res.send("ok");
 })
 
@@ -81,7 +76,6 @@ app.get('/home2', (req, res)=>{
         html: function(){
             res.render('home2',{
                 serie
-
             });
         }
 
