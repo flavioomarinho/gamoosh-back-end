@@ -27,13 +27,10 @@
 </table>
 
 <script>
-	
-	var myArray = [];
-
-	for(var i = 0; i<5; i++){
-		myArray[i].push('<%= arrayReq[0].serie %>');
-	}
-
+	var myArray = [
+	    {'obj':'<%= arrayObjeto %>'},
+	   
+	]
 	
 	buildTable(myArray)
 
@@ -44,7 +41,7 @@
 
 		for (var i = 0; i < data.length; i++){
 			var row = `<tr>
-							<td>${data[i]}</td>
+							<td>${data[i].obj[i]}</td>
 		
 					  </tr>`
 			table.innerHTML += row
