@@ -56,7 +56,6 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-
     boxcubo = {
         serie: req.body.serie,
         mac: req.body.mac,
@@ -66,9 +65,13 @@ app.post('/recebe', (req, res) => {
         erro: req.body.erro,
         versao: req.body.versao,
         localizacao: req.body.localizacao
-
     }
+    
+
     arrayObjetos.push(boxcubo);
+    substituiElemento(arrayObjetos, arrayObjetos.length);
+  
+
     res.send("ok");
 })
 
@@ -89,10 +92,28 @@ app.get('/home2', (req, res) => {
                 { arrayObjetos
                 }
             );
+            console.log(arrayObjetos);
+            
         }
     })
 
 })
+
+function substituiElemento( array, tamanho){
+    for(var i =0; i < tamanho; i++){
+        if(array[i].serie == arrayObjetos[tamanho-1].serie){
+            array[i] = arrayObjetos[tamanho-1];
+        }
+        if(array[i].serie == 'BC000088'){
+            arrayObjetos.splice(tamanho-1,1);
+        }
+    }
+    
+
+
+}
+
+
 
 app.listen(process.env.PORT || 3000);
 
