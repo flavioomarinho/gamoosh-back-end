@@ -10,7 +10,9 @@ const { REFUSED } = require('dns');
 
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
-let serie = [];
+let arrayObjetos = [];
+let boxcubo = {};
+
 let userLogged;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -54,7 +56,19 @@ app.post('/input', (req, res) => {
 })
 
 app.post('/recebe', (req, res) => {
-    serie.push(req.body.serie);
+
+    boxcubo = {
+        serie: req.body.serie,
+        mac: req.body.mac,
+        ip: req.body.ip,
+        estado: req.body.estado,
+        calibracao: req.body.calibracao,
+        erro: req.body.erro,
+        versao: req.body.versao,
+        localizacao: req.body.localizacao
+
+    }
+    arrayObjetos.push(boxcubo);
     res.send("ok");
 })
 
@@ -70,10 +84,16 @@ app.get('/dashboard', function (req, res) {
 app.get('/home2', (req, res) => {
     res.format({
         html: function () {
-            res.render('home2', ['teste 1', 'teste 2']);
+            res.render(
+                'home2',
+                { arrayObjetos
+                }
+            );
         }
     })
 
 })
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000);
+
+console.log('listening on port: ' + (process.env.PORT || 3000))

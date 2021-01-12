@@ -22,31 +22,18 @@
     </tr>
 
     <tbody id="myTable">
-		<% for(var i = 0; i < serie.length; ++ i) { %>
-			<%=serie[i]%>
+		<% for(var i = 0; i < arrayObjetos.length; ++ i) { %>
+			<tr>
+				<td><%=arrayObjetos[i].serie%></td>
+				<td><%=arrayObjetos[i].mac%></td>	
+				<td><%=arrayObjetos[i].ip%></td>	
+				<td><%=arrayObjetos[i].estado%></td>	
+				<td><%=arrayObjetos[i].calibracao%></td>	
+				<td><%=arrayObjetos[i].erro%></td>	
+				<td><%=arrayObjetos[i].versao%></td>	
+				<td><%=arrayObjetos[i].localizacao%></td>	
+
+			</tr>
 		<%}%>
     </tbody>
 </table>
-
-<script>
-	// var myArray = [
-	// 	{'serie':'<%= serie %>'},
-	// 	{'serie':'<%= serie1 %>'}
-	// ]
-	
-	// buildTable(myArray)
-
-
-
-	// function buildTable(data){
-	// 	var table = document.getElementById('myTable');
-	// 	for (var i = 0; i < data.length; i++){
-	// 		var row = `<tr>
-	// 						<td>${data[i].serie}</td>
-		
-	// 				  </tr>`
-	// 		table.innerHTML += row
-	// 	}
-	// }
-
-</script>
