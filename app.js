@@ -68,11 +68,11 @@ app.post('/recebe', (req, res) => {
         versao: req.body.versao,
         localizacao: req.body.localizacao
     }
-    
+
 
     arrayObjetos.push(boxcubo);
     substituiElemento(arrayObjetos, arrayObjetos.length);
-  
+
 
     res.send("ok");
 })
@@ -91,25 +91,26 @@ app.get('/home', (req, res) => {
         html: function () {
             res.render(
                 'home',
-                { arrayObjetos
+                {
+                    arrayObjetos
                 }
             );
             console.log(arrayObjetos);
-            
+
         }
     })
 })
 
-function substituiElemento( array, tamanho){
-    for(var i =0; i < tamanho; i++){
-        if(array[i].serie == arrayObjetos[tamanho-1].serie){
-            array[i] = arrayObjetos[tamanho-1];
+function substituiElemento(array, tamanho) {
+    for (var i = 0; i < tamanho; i++) {
+        if (array[i].serie == arrayObjetos[tamanho - 1].serie) {
+            array[i] = arrayObjetos[tamanho - 1];
         }
-        if(array[i].serie == 'BC000088'){
-            arrayObjetos.splice(tamanho-1,1);
+        if (array[i].serie == 'BC000088') {
+            arrayObjetos.splice(tamanho - 1, 1);
         }
     }
-    
+
 
 
 }

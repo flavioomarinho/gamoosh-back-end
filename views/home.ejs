@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<link rel='stylesheet' href='css/home.css'>	
+<link rel='stylesheet' href='css/home.css'>
 <table class="table table-striped">
 	<tr class="bg-info">
 		<th>Serie</th>
@@ -19,7 +19,7 @@
 
 	<tbody id="myTable">
 		<% for(var i = 0; i < arrayObjetos.length; ++ i) { %>
-			
+
 		<tr id="linha">
 			<td><%=arrayObjetos[i].serie%></td>
 			<td><%=arrayObjetos[i].mac%></td>
@@ -31,14 +31,14 @@
 			<td><%=arrayObjetos[i].localizacao%></td>
 			<td><button id="detalhes">Detalhes</button></td>
 		</tr>
-	
+
 		<%}%>
 		</tbody>
 	
 		<script>
 			var detalhes = document.getElementById('detalhes');
 			detalhes.onclick = function () {
-				location.assign('http://localhost:3000/home');
+				location.assign('http://localhost:3000/dashboard');
 			}
 
 		</script>
