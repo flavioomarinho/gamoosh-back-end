@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+	th {
+		font-family: 'Open Sans', sans-serif;
+		font-size: small;
+		color: #fff;
+		background-color: #f06560;
+	}
+
+	button {
+		border-radius: 10px;
+	}

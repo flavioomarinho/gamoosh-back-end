@@ -22,7 +22,8 @@ app.use(express.static(publicDir));
 app.use('/', express.static(__dirname + '/www'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + 'public/css'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -35,7 +36,7 @@ firebase.auth().onAuthStateChanged((user) => {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index2');
+    res.render('index');
 })
 
 app.post('/login', (req, res) => {
@@ -43,7 +44,7 @@ app.post('/login', (req, res) => {
     Auth.SignInWithEmailAndPassword(getBody.email, getBody.password)
         .then((login) => {
             if (!login.err) {
-                res.redirect('/home2')
+                res.redirect('/home')
             } else {
                 res.redirect('/')
             }
@@ -85,11 +86,11 @@ app.get('/dashboard', function (req, res) {
     }
 })
 
-app.get('/home2', (req, res) => {
+app.get('/home', (req, res) => {
     res.format({
         html: function () {
             res.render(
-                'home2',
+                'home',
                 { arrayObjetos
                 }
             );

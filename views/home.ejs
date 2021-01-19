@@ -1,101 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Painel BoxCubo</title>
-</head>
-<body>
-    <div class="content">
-        <table class="rTable">
-            <thead>
-                <tr>
-                    <th>Num. Série</th>
-                    <th>Mac</th>
-                    <th>IP</th>
-                    <th>Estado</th>
-                    <th>Calibração</th>
-                    <th>Localização</th>
-                    <th>Erro</th>
-                    <th>Versão</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><%= serie %></td>
-                    <td><%= mac %></td>
-                    <td><%= ip %></td>
-                    <td><%= estado %></td>
-                    <td><%= calibracao %></td>
-                    <td><%= localizacao %></td>
-                    <td><%= erro %></td>
-                    <td><%= versao %></td>
-                </tr>
-                <tr>
-                    <td><%= serie1 %></td>
-                    <td><%= mac1 %></td>
-                    <td><%= ip1 %></td>
-                    <td><%= estado1 %></td>
-                    <td><%= calibracao1 %></td>
-                    <td><%= localizacao1 %></td>
-                    <td><%= erro1 %></td>
-                    <td><%= versao1 %></td>
-                </tr>
-                <tr>
-                    <td><%= serie2 %></td>
-                    <td><%= mac2 %></td>
-                    <td><%= ip2 %></td>
-                    <td><%= estado2 %></td>
-                    <td><%= calibracao2 %></td>
-                    <td><%= localizacao2 %></td>
-                    <td><%= erro2 %></td>
-                    <td><%= versao2 %></td>
-                </tr>
-                <tr>
-                    <td><%= serie3 %></td>
-                    <td><%= mac3 %></td>
-                    <td><%= ip3 %></td>
-                    <td><%= estado3 %></td>
-                    <td><%= calibracao3 %></td>
-                    <td><%= localizacao3 %></td>
-                    <td><%= erro3 %></td>
-                    <td><%= versao3 %></td>
-                </tr>
-        
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<style>
-    *{margin: 0; padding: 0; box-sizing: border-box;}
+<link rel='stylesheet' href='css/home.css'>	
+<table class="table table-striped">
+	<tr class="bg-info">
+		<th>Serie</th>
+		<th>Mac</th>
+		<th>Ip</th>
+		<th>Estado</th>
+		<th>Calibração</th>
+		<th>Erro</th>
+		<th>Versão</th>
+		<th>Localização</th>
+		<th>Detalhes</th>
+	</tr>
 
-.content{display: flex;margin: auto;}
+	<tbody id="myTable">
+		<% for(var i = 0; i < arrayObjetos.length; ++ i) { %>
+			
+		<tr id="linha">
+			<td><%=arrayObjetos[i].serie%></td>
+			<td><%=arrayObjetos[i].mac%></td>
+			<td><%=arrayObjetos[i].ip%></td>
+			<td><%=arrayObjetos[i].estado%></td>
+			<td><%=arrayObjetos[i].calibracao%></td>
+			<td><%=arrayObjetos[i].erro%></td>
+			<td><%=arrayObjetos[i].versao%></td>
+			<td><%=arrayObjetos[i].localizacao%></td>
+			<td><button id="detalhes">Detalhes</button></td>
+		</tr>
+	
+		<%}%>
+		</tbody>
+	
+		<script>
+			var detalhes = document.getElementById('detalhes');
+			detalhes.onclick = function () {
+				location.assign('http://localhost:3000/home');
+			}
 
-.rTable{width: 100%; text-align: center;}
-
-    .rTable thead{background: black; font-weight: bold; color: #fff;}
-    .rTable tbody tr:nth-child(2n){background: #ccc;}
-
-@media screen and (max-width: 480px){
-
-
-}
-
-@media only screen and (min-width: 1200px){
-    .content{width: 100%;}
-
-    .rTable tbody tr td:nth-child(1){width: 10%;} 
-    .rTable tbody tr td:nth-child(2){width: 15%;} 
-    .rTable tbody tr td:nth-child(3){width: 15%;} 
-    .rTable tbody tr td:nth-child(4){width: 10%;} 
-    .rTable tbody tr td:nth-child(5){width: 10%;} 
-    .rTable tbody tr td:nth-child(6){width: 20%;} 
-    .rTable tbody tr td:nth-child(7){width: 10%;} 
-    .rTable tbody tr td:nth-child(8){width: 10%;} 
-
-}
-</style>
+		</script>
+		</script>
+	</table>
