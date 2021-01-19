@@ -8,6 +8,7 @@ const ejs = require('ejs');
 const { EWOULDBLOCK } = require('constants');
 const { REFUSED } = require('dns');
 
+
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
@@ -34,7 +35,7 @@ firebase.auth().onAuthStateChanged((user) => {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index2');
 })
 
 app.post('/login', (req, res) => {
@@ -42,7 +43,7 @@ app.post('/login', (req, res) => {
     Auth.SignInWithEmailAndPassword(getBody.email, getBody.password)
         .then((login) => {
             if (!login.err) {
-                res.redirect('/dashboard')
+                res.redirect('/home2')
             } else {
                 res.redirect('/')
             }
@@ -96,7 +97,6 @@ app.get('/home2', (req, res) => {
             
         }
     })
-
 })
 
 function substituiElemento( array, tamanho){
