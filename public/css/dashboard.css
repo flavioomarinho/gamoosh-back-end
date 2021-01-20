@@ -24,7 +24,7 @@
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-
+    padding-top: 10px;
 }
 
 
@@ -37,8 +37,12 @@
     width: 1000px;
     height: 150px;
     border-style:  groove;
+
+
+
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    padding-top: 10px;
 
 }
 
@@ -60,7 +64,7 @@
     background: #f2f2f2;
     color: #003eea;
     text-align: left;
-    width: 100%;
+    width: 50%;
     height: 55px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
@@ -165,4 +169,12 @@ input{
     width: 200px;
     
 
+}
+
+.serie{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #f06560;
+    font-weight: bold;
 }
