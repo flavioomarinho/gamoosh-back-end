@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,16 +8,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='css/dashboard.css'>
 </head>
+
 <body>
     <section class="container flex">
         <div class="item-2">
             <img src="https://scc4.com.br/images/logo_boxcubo.png" width="200" height="50">
-    
-        </div>
-        
+       </div>
+
     </section>
     <section class="container flex">
-        <div class="item">
+        <div class="item-6">
             <h1>Comando realizado com sucesso!</h1>
         </div>
         <div class="item">
@@ -25,29 +26,133 @@
     </section>
     <section class="container flex">
         <div class="item-1">
-            <button>Reiniciar</button>
-            <button>Calibrar</button>
-            <button>Testar sensores</button>
-            <button>Alterar Servidor</button>
-            <button>Alterar IP</button>
-            <button>Modo Balança</button>
-            <button>Modo Cubagem</button>
-            <button>Alterar Serie</button>
-            <button>Alterar CNPJ</button>
-            <button>Alterar Integração</button>
-            <button>Desativar Buzzer</button>
-            <button>Ativar Buzzer</button>
-            <button>Ativar PLP</button>
-            <button>Desativar PLP</button>
+            <input type="radio" id="reiniciar" name="reiniciar" value="reiniciar">
+            <label for="reiniciar">Reiniciar software</label><br>
+            <input type="radio" id="restart" name="restart" value="restart">
+            <label for="restart">Reiniciar SO</label><br>
+            <input type="radio" id="desligar" name="desligar" value="desligar">
+            <label for="desligar">Desligar</label><br>            
 
+            <input type="radio" id="calibrar" name="calibrar" value="calibrar">
+            <label for="calibrar">Calibrar</label>
+            <label for="calibrar">x:</label>
+            <input type="text" name="x" size="1">
+            <label for="calibrar">y:</label>
+            <input type="text" name="y" size="1">
+            <label for="calibrar">z:</label>
+            <input type="text" name="z" size="1">
+            <label for="calibrar">cm</label><br>
+            <input type="radio" id="testarSensores" name="testarSensores" value="testarSensores">
+            <label for="testarSensores">Testar Sensores</label><br>
+
+            <input type="radio" id="testsMedia" name="testsMedia" value="testsMedia">
+            <label for="testsMedia">Testar Sensores Média</label><br>
+
+            <input type="radio" id="inverteSensores" name="inverteSensores" value="inverteSensores">
+            <label for="inverteSensores">Inverter Sensores</label><br>
+
+            <input type="radio" id="stressSensores" name="stressSensores" value="stressSensores">
+            <label for="stressSensores">Stress Sensores</label>
+            <label for="stressSensores">Nº:</label>
+            <input type="text" name="stressSensores" size="20"><br>
+
+
+            <input type="radio" id="modoBalanca" name="modoBalanca" value="modoBalanca">
+            <label for="modoBalanca">Modo Balança</label><br>
+
+            <input type="radio" id="modoCubagem" name="modoCubagem" value="modoCubagem">
+            <label for="modoCubagem">Modo Cubagem</label><br>
+
+
+            <input type="radio" id="desativarBuzzer" name="desativarBuzzer" value="desativarBuzzer">
+            <label for="desativarBuzzer">Desativar Buzzer</label><br>
+
+            <input type="radio" id="ativarBuzzer" name="ativarBuzzer" value="ativarBuzzer">
+            <label for="ativarBuzzer">Ativar Buzzer</label><br>
+            <input type="radio" id="ativarCamera" name="ativarCamera" value="ativarCamera">
+            <label for="ativarCamera">Ativar Câmera</label><br>
+
+            <input type="radio" id="desativarCamera" name="desativarCamera" value="desativarCamera">
+            <label for="desativarCamera">Desativar Câmera</label><br>
         </div>
         <div class="item-3">
-            <p>Digite o parâmetro que deseja enviar, selecione o comando e clique em enviar!</p>
-<textarea></textarea>
-<button>Enviar comando</button>
+
+            
+            <input type="radio" id="mostrarIp" name="mostrarIp" value="mostrarIp">
+            <label for="mostrarIp">Mostrar IP</label><br>
+
+            <input type="radio" id="alterarServidor" name="alterarServidor" value="alterarServidor">
+            <label for="alterarServidor">Alterar IP Servidor</label>
+            <label for="ipServidor">IP:</label>
+            <input type="text" name="ipServidor" size="11"><br>
+
+            <input type="radio" id="alterarIp" name="alterarIp" value="alterarIp">
+            <label for="alterarIp">Alterar IP Máquina</label>
+            <label for="ipMaquina">IP:</label>
+            <input type="text" name="ipMaquina" size="10"><br>
+
+            <input type="radio" id="ipFixo" name="ipFixo" value="ipFixo">
+            <label for="ipFixo">IP Fixo</label>
+            <label for="ipFixo">Hexa:</label>
+            <input type="text" name="ipFixo" size="10"><br>
+
+
+            <input type="radio" id="ativarSsh" name="ativarSsh" value="ativarSsh">
+            <label for="ativarSsh">Ativar SSH</label><br>
+
+            <input type="radio" id="desativarSsh" name="desativarSsh" value="desativarSsh">
+            <label for="desativarSsh">Desativar SSH</label><br>
+            
+
+            <input type="radio" id="mudarWifi" name="mudarWifi" value="mudarWifi">
+            <label for="mudarWifi">Rede WIFI</label>
+            <label for="ssid">SSID:</label>
+            <input type="ssid" name="ssid" size="5">
+            <label for="senha">Senha:</label>
+            <input type="text" name="senha" size="5"><br>
+
+
+        </div>
+        <div class="item-5">
+
+            <input type="radio" id="integracaoPp" name="integracaoPp" value="integracaoPp">
+            <label for="integracaoPp">Integração PP</label><br>
+            
+            <input type="radio" id="integracaoSectSoap" name="integracaoSectSoap" value="integracaoSectSoap">
+            <label for="integracaoSectSoap">Integração Sect SOAP</label><br>
+
+            <input type="radio" id="integracaoSectWs" name="integracaoSectWs" value="integracaoSectWs">
+            <label for="integracaoSectWs">Integração Sect WS</label><br>
+            
+            <input type="radio" id="integracaoSgp" name="integracaoSgp" value="integracaoSgp">
+            <label for="integracaoSgp">Integração SGP</label><br>
+            
+        </div>
+        <div class="item-3">
+
+            <input type="radio" id="ativarPlp" name="ativarPlp" value="ativarPlp">
+            <label for="ativarPlp">Ativar PLP</label><br>
+
+            <input type="radio" id="desativarPlp" name="desativarPlp" value="desativarPlp">
+            <label for="desativarPlp">Desativar PLP</label><br>
+
+            <input type="radio" id="alterarSerie" name="alterarSerie" value="alterarSerie">
+            <label for="alterarSerie">Alterar Série</label>
+            <label for="alterarSerie">Nº:</label>
+            <input type="text" name="alterarSerie" size="20"><br>
+
+            <input type="radio" id="alterarCnpj" name="alterarCnpj" value="alterarCnpj">
+            <label for="alterarCnpj">Alterar CNPJ</label>
+            <label for="alterarCnpj">Nº:</label>
+            <input type="text" name="alterarCnpj" size="20"><br>
 
         </div>
 
+        <div class="item-4">
+            <button>ENVIAR COMANDO</button>
+
+        </div>
     </section>
 </body>
+
 </html>

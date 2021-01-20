@@ -16,46 +16,101 @@
 
 .item {
     margin:1px;
-    background: #f06560;
+    background: #003eea;
     color: #fff;
     text-align: left;
     width: 1000px;
     height: 150px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+
+}
+
+
+
+.item-6 {
+    margin:1px;
+    background: #878787;
+    color: #fff;
+    text-align: left;
+    width: 1000px;
+    height: 150px;
+    border-style:  groove;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 
 }
 
 .item-1{
     margin: 1px;
-	background: #545454;
+	background: #f2f2f2;
 	text-align: left;
-    width: 80%;
+    width: 100%;
     height: 680px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 
 }
 
-.item-3{
-    margin: 1px;
-	background: #545454;
-	text-align: left;
-    width: 20%;
-    height: 680px;
-    border-style:  groove;
-    font-family: 'Open Sans', sans-serif;
 
-}
 .item-2{
     margin: 1px;
-    background: #fff;
-    color: #545454;
+    background: #f2f2f2;
+    color: #003eea;
     text-align: left;
     width: 100%;
     height: 55px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+
+
+}
+
+
+.item-3{
+    margin: 1px;
+	background: #f2f2f2;
+	text-align: left;
+    width: 100%;
+    height: 680px;
+    border-style:  groove;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+
+
+
+}
+
+
+
+.item-4{
+    margin: 1px;
+	background: #f2f2f2;
+    text-align: left;
+    width: 50%;
+    height: 680px;
+    border-style:  groove;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+
+
+
+}
+
+
+.item-5{
+    margin: 1px;
+	background: #f2f2f2;
+	text-align: left;
+    width: 70%;
+    height: 680px;
+    border-style:  groove;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+
 
 
 }
@@ -74,7 +129,7 @@ h1 {
 }
 
 body {
-    color:#fff;
+    color:#878787;
     font-family: 'Open Sans', sans-serif;
 
 }
@@ -84,22 +139,14 @@ button{
     width: 150px;
     height: 60px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 12px;
     margin-top: 20px;
     margin-left: 20px;
-    color: #545454;
+    color: #fff;
+    border-color: #f06560 ;
+    background-color: #f06560;
 
 
-}
-
-textarea{
-    width: 87%;
-    height: 60%;
-    position: relative;
-    margin-top: 2px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 p{
@@ -107,5 +154,15 @@ p{
     margin-right: 20px;
     text-align: justify;
 
+
+}
+
+input{
+    margin: 15px;
+}
+
+#enviarComandos{
+    width: 200px;
+    
 
 }
