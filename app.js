@@ -7,12 +7,11 @@ const Auth = require('./firebase.js');
 const ejs = require('ejs');
 const { EWOULDBLOCK } = require('constants');
 const { REFUSED } = require('dns');
-
-
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
+let id;
 
 let userLogged;
 
@@ -68,19 +67,28 @@ app.post('/recebe', (req, res) => {
         versao: req.body.versao,
         localizacao: req.body.localizacao
     }
-
-
     arrayObjetos.push(boxcubo);
     substituiElemento(arrayObjetos, arrayObjetos.length);
-
-
-    res.send("ok");
+    res.send(boxcubo);
+    
 })
 
 
+app.post('/comando',(req, res)=>{
+    comando = {
+        id: 'cmdserie'	,
+        valorComando: 'CMDSRV>192.168.5.23'
+    }
+    res.send(comando);
+
+})
+ 
 app.get('/dashboard', function (req, res) {
     if (userLogged) {
-        res.render('dashboard');
+        res.render(
+            'dashboard',
+          {id}  
+            );
     } else {
         res.redirect('/')
     }

@@ -144,7 +144,7 @@
             <input type="radio" id="alterarSerie" name="alterarSerie" value="alterarSerie">
             <label for="alterarSerie">Alterar Série</label>
             <label for="alterarSerie">Nº:</label>
-            <input type="text" name="alterarSerie" size="20"><br>
+            <input id="altera" type="text" name="alterarSerie" size="20"><br>
 
             <input type="radio" id="alterarCnpj" name="alterarCnpj" value="alterarCnpj">
             <label for="alterarCnpj">Alterar CNPJ</label>
@@ -154,10 +154,20 @@
         </div>
 
         <div class="item-4">
-            <button>ENVIAR COMANDO</button>
+            <button id="comando">ENVIAR COMANDO</button>
 
         </div>
     </section>
 </body>
 
+<script>
+    var comando = document.getElementById('comando');
+    comando.onclick = function(){
+    var cmd1= document.getElementById('altera').value;
+    console.log(cmd1);
+    localStorage.setItem('comando',cmd1);
+      }
+
+
+</script>
 </html>

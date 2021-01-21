@@ -29,18 +29,15 @@
 			<td><%=arrayObjetos[i].erro%></td>
 			<td><%=arrayObjetos[i].versao%></td>
 			<td><%=arrayObjetos[i].localizacao%></td>
-			<td><button id="detalhes">Detalhes</button></td>
+			<td><button id="detalhes" onclick="redireciona()">Detalhes</button></td>
 		</tr>
 
 		<%}%>
 		</tbody>
 	
 		<script>
-			var detalhes = document.getElementById('detalhes');
-			detalhes.onclick = function () {
+			function redireciona(){
 				location.assign('https://painelboxcubo.herokuapp.com/dashboard');
 			}
-
-		</script>
-		</script>
+</script>
 	</table>
