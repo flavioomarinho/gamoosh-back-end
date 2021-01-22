@@ -103,28 +103,20 @@ app.get('/home', (req, res) => {
                     arrayObjetos
                 }
             );
-            console.log(arrayObjetos);
-
         }
     })
 })
 
 function substituiElemento(array, tamanho) {
-    for (var i = 0; i < tamanho; i++) {
-        if (array[i].serie == arrayObjetos[tamanho - 1].serie) {
-            array[i] = arrayObjetos[tamanho - 1];
-        }
-        if (array[i].serie == 'BC000088') {
-            arrayObjetos.splice(tamanho - 1, 1);
-        }
-    }
 
-
-
+     for (var i = 0; i < tamanho; i++) {
+        if (array[i].serie == array[tamanho - 1].serie) {
+            array[i] = array[tamanho - 1];
+   
+                   }
+     }   
 }
-
 
 
 app.listen(process.env.PORT || 3000);
 
-console.log('listening on port: ' + (process.env.PORT || 3000))
