@@ -7,12 +7,13 @@ const Auth = require('./firebase.js');
 const ejs = require('ejs');
 const { EWOULDBLOCK } = require('constants');
 const { REFUSED } = require('dns');
+const { read } = require('fs');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
 let id;
-
+let cmd;
 let userLogged;
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,6 +39,7 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
+//Autenticação usuário
 app.post('/login', (req, res) => {
     let getBody = req.body;
     Auth.SignInWithEmailAndPassword(getBody.email, getBody.password)
@@ -50,12 +52,8 @@ app.post('/login', (req, res) => {
         })
 })
 
-app.post('/input', (req, res) => {
-    let { name } = req.body
-    Auth.inputData(name)
-    res.redirect('/')
-})
 
+//Recebe os dados da Rasp
 app.post('/recebe', (req, res) => {
     boxcubo = {
         serie: req.body.serie,
@@ -74,15 +72,22 @@ app.post('/recebe', (req, res) => {
 })
 
 
-app.post('/comando',(req, res)=>{
-    comando = {
-        id: 'cmdserie'	,
-        valorComando: 'CMDSRV>192.168.5.23'
-    }
-    res.send(comando);
+//Máquina lê estado comando
+app.get('/comando', function(req,res){
+    res.send(cmd)
+
 
 })
+
+//Recebe comando painel
+app.post('/form', (req, res)=>{
+    cmd = req.body;
+    console.log(cmd);
+    res.send('Comando realizado com sucesso');
+})
+
  
+//Renderiza painel controle
 app.get('/dashboard', function (req, res) {
     if (userLogged) {
         res.render(
@@ -94,6 +99,7 @@ app.get('/dashboard', function (req, res) {
     }
 })
 
+//Renderiza lista de máquinas
 app.get('/home', (req, res) => {
     res.format({
         html: function () {
@@ -107,8 +113,8 @@ app.get('/home', (req, res) => {
     })
 })
 
-function substituiElemento(array, tamanho) {
 
+function substituiElemento(array, tamanho) {
      for (var i = 0; i < tamanho; i++) {
         if (array[i].serie == array[tamanho - 1].serie) {
             array[i] = array[tamanho - 1];
@@ -116,6 +122,7 @@ function substituiElemento(array, tamanho) {
                    }
      }   
 }
+
 
 
 app.listen(process.env.PORT || 3000);

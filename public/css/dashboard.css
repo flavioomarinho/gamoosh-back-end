@@ -15,12 +15,12 @@
 
 
 .item {
-    margin:1px;
+    margin:auto;
     background: #003eea;
     color: #fff;
     text-align: left;
     width: 1000px;
-    height: 150px;
+    height: 60px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -30,12 +30,12 @@
 
 
 .item-6 {
-    margin:1px;
+    margin:auto;
     background: #878787;
     color: #fff;
     text-align: left;
     width: 1000px;
-    height: 150px;
+    height: 60px;
     border-style:  groove;
 
 
@@ -47,11 +47,11 @@
 }
 
 .item-1{
-    margin: 1px;
+    margin: auto;
 	background: #f2f2f2;
 	text-align: left;
     width: 100%;
-    height: 680px;
+    height: 770px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
@@ -60,7 +60,7 @@
 
 
 .item-2{
-    margin: 1px;
+    margin: auto;
     background: #f2f2f2;
     color: #003eea;
     text-align: left;
@@ -75,10 +75,10 @@
 
 
 .item-3{
-    margin: 1px;
+    margin: auto;
 	background: #f2f2f2;
 	text-align: left;
-    width: 100%;
+    width: 20%;
     height: 680px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
@@ -91,7 +91,7 @@
 
 
 .item-4{
-    margin: 1px;
+    margin: auto;
 	background: #f2f2f2;
     text-align: left;
     width: 50%;
@@ -106,10 +106,10 @@
 
 
 .item-5{
-    margin: 1px;
+    margin: auto;
 	background: #f2f2f2;
 	text-align: left;
-    width: 70%;
+    width: 20%;
     height: 680px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
@@ -133,15 +133,16 @@ h1 {
 }
 
 body {
-    color:#878787;
+    color:black;
+    font-weight: bolder;
     font-family: 'Open Sans', sans-serif;
 
 }
 
 button{
     border-radius: 15px;
-    width: 150px;
-    height: 60px;
+    width: 70px;
+    height: 30px;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     margin-top: 20px;
