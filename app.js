@@ -83,7 +83,7 @@ app.get('/comando', function(req,res){
 app.post('/form', (req, res)=>{
     cmd = req.body;
     console.log(cmd);
-    res.redirect('/home');
+    res.redirect('/dashboard');
 })
 
  
