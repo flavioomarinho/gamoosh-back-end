@@ -16,7 +16,7 @@
 
 .item {
     margin:auto;
-    background: #003eea;
+    background: #f06560;
     color: #fff;
     text-align: left;
     width: 1000px;
@@ -25,18 +25,20 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     padding-top: 10px;
+    border-radius: 10px;
 }
 
 
 
 .item-6 {
     margin:auto;
-    background: #878787;
+    background:  white;
     color: #fff;
     text-align: left;
     width: 1000px;
     height: 60px;
     border-style:  groove;
+    border-radius: 10px;
 
 
 
@@ -55,6 +57,8 @@
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
+    border-radius: 10px;
+
 
 }
 
@@ -62,13 +66,14 @@
 .item-2{
     margin: auto;
     background: #f2f2f2;
-    color: #003eea;
+    color: black;
     text-align: left;
     width: 50%;
     height: 55px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
+    border-radius: 10px;
 
 
 }
@@ -83,9 +88,7 @@
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
-
-
-
+    border-radius: 10px;
 }
 
 
@@ -100,6 +103,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
 
+    border-radius: 10px;
 
 
 }
@@ -127,15 +131,16 @@
 
 h1 {
 	text-align: center;
-	margin: 20px 0 0 0;
+    margin: 14px 0 0 0;
+    color: black;
     font-family: 'Open Sans', sans-serif;
 
 }
 
 body {
     color:black;
+    font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-
 }
 
 button{
@@ -157,8 +162,6 @@ p{
     margin-left: 20px;
     margin-right: 20px;
     text-align: justify;
-
-
 }
 
 input{
@@ -175,6 +178,6 @@ input{
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     text-align: center;
-    color: #f06560;
+    color: black;
     font-weight: bold;
 }
