@@ -22,7 +22,7 @@
 		<% for(var i = 0; i < arrayObjetos.length; ++ i) { %>
 
 		<tr id="linha">
-			<td><%=arrayObjetos[i].serie%></td>
+			<td id="serieNode"><%=arrayObjetos[i].serie%></td>
 			<td><%=arrayObjetos[i].mac%></td>
 			<td><%=arrayObjetos[i].ip%></td>
 			<td><%=arrayObjetos[i].estado%></td>
@@ -33,18 +33,23 @@
 			<td><button id="detalhes" onclick="redireciona()">Detalhes</button></td>
 		</tr>
 
+
 		<%}%>
+
+	
+
 		</tbody>
 	</table>
 		<script>
 			function redireciona() {
-				location.assign('https://painelboxcubo.herokuapp.com/dashboard');
-				
-		}
+				var valorDaSerie =  document.getElementById("serieNode").innerHTML;
+				localStorage.setItem("serie", JSON.stringify({valorDaSerie}));
+				location.assign('http://localhost:3000/dashboard');
+			}
 
 		</script>
-<script>
-	setInterval(function () {
-		window.location.reload(1);
-	}, 30000);
-</script>
+		<script>
+			setInterval(function () {
+				window.location.reload(1);
+			}, 30000);
+		</script>

@@ -75,8 +75,6 @@ app.post('/recebe', (req, res) => {
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
     res.send(cmd)
-
-
 })
 
 //Recebe comando painel
@@ -112,6 +110,7 @@ app.get('/home', (req, res) => {
         }
     })
 })
+
 
 
 function substituiElemento(array, tamanho) {

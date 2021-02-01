@@ -15,7 +15,7 @@
             <img src="https://scc4.com.br/images/logo_boxcubo.png" width="200" height="50">
         </div>
         <div class="item-2">
-            <p class="serie">BC00236 - AGF Coqueiral - Campinas/SP</p>
+            <h1 id="painel"></h1>
         </div>
 
     </section>
@@ -24,7 +24,7 @@
            <h1>Teste</h1>
         </div>
         <div class="item">
-            <h1>Tentando conexão</h1>
+            <h1 id="respostaPainel">TESTE</h1>
         </div>
     </section>
     <section class="container flex">
@@ -235,15 +235,22 @@
     </section>
 </body>
 
-<script>
-    var comando = document.getElementById('comando');
-    comando.onclick = function () {
-        var cmd1 = document.getElementById('altera').value;
-        console.log(cmd1);
-        localStorage.setItem('comando', cmd1);
-    }
-
-
-</script>
-
 </html>
+    <script>
+    
+        var comando = document.getElementById('comando');
+        if(comando != null){
+            comando.onclick = function () {
+            var cmd1 = document.getElementById('altera').value;
+            console.log(cmd1);
+            localStorage.clear();
+            }
+        }
+    
+        var variavelLocal = localStorage.getItem("serie");
+        var aux = variavelLocal.slice(17,24);
+        document.getElementById("painel").innerHTML = aux;
+        
+
+
+    </script>
