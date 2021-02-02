@@ -24,7 +24,7 @@
            <h1>Teste</h1>
         </div>
         <div class="item">
-            <h1 id="respostaPainel">TESTE</h1>
+            <h1 id="respostaPainel"></h1>
         </div>
     </section>
     <section class="container flex">
@@ -237,20 +237,18 @@
 
 </html>
     <script>
-    
         var comando = document.getElementById('comando');
         if(comando != null){
             comando.onclick = function () {
             var cmd1 = document.getElementById('altera').value;
             console.log(cmd1);
-            localStorage.clear();
+        
             }
         }
-    
+
         var variavelLocal = localStorage.getItem("serie");
+        if(variavelLocal != null)
         var aux = variavelLocal.slice(17,24);
         document.getElementById("painel").innerHTML = aux;
-        
-
 
     </script>
