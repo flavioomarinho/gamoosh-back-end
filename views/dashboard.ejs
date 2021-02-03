@@ -63,7 +63,6 @@
                 <input type="text" name="y" size="1">
                 <label for="calibrar">z:</label>
                 <input type="text" name="z" size="1">
-                <label for="calibrar">cm</label>
                 <button type="sumit">Enviar</button>
             </form>
 
@@ -76,7 +75,7 @@
             <form action="/form" method="POST">
                 <input type="radio" name="Comando" value="CMDTESTSTRESS">
                 <label for="stressSensores">Stress Sensores Nº :</label>
-                <input type="text" name="comando" size="20">
+                <input type="text" name="comando" size="15">
                 <button type="sumit">Enviar</button>
             </form>
 
@@ -85,6 +84,7 @@
                 <input type="radio" name="comando" value="CMDMDODSDIM">
                 <label for="modoBalanca">Modo Balança</label>
                 <button type="sumit">Enviar</button>
+                              
             </form>
 
 
@@ -113,17 +113,17 @@
                 <button type="sumit">Enviar</button>
             </form>
 
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDDSCAM">
-                <label for="desativaCamera">Ativar Câmera</label>
-                <button type="sumit">Enviar</button>
-            </form>
+
         </div>
 
 
         <div class="item-1">
 
-
+            <form action="/form" method="POST">
+                <input type="radio" name="comando" value="CMDDSCAM">
+                <label for="desativaCamera">Ativar Câmera</label>
+                <button type="sumit">Enviar</button>
+            </form>
 
             <form action="/form" method="POST">
                 <input type="radio" name="comando" value="CMDSHOWIP">
@@ -169,11 +169,11 @@
 
             <form action="/form" method="POST">
                 <input type="radio" name="comando" value="CMDWIFI">
-                <label for="mudarWifi">Rede WIFI</label>
+                <label for="mudarWifi">WIFI</label>
                 <label for="ssid">SSID :</label>
-                <input type="ssid" name="ssid" size="5">
+                <input type="ssid" name="ssid" size="4">
                 <label for="senha">Senha :</label>
-                <input type="text" name="senha" size="5">
+                <input type="text" name="senha" size="4">
                 <button type="sumit">Enviar</button>
             </form>
 
@@ -226,10 +226,24 @@
                 <button type="sumit">Enviar</button>
             </form>
             <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDBASH>SGP">
+                <input type="radio" id="nome" name="comando" value="CMDBASH>SGP">
                 <label for="integracaoSgp">Integração SGP</label>
                 <button type="sumit">Enviar</button>
+            
             </form>
+
+        </div>
+
+        <div class="item-1">
+            <h2>Informações Gerais</h2>
+            <div id="geral">
+                <label>SRV: 192.168.1.59</label><br>
+                <label>Versão hardware: Raspberry Pi 3 Model B+</label><br>
+                <label>Reinicialização/dia: 8</label><br>
+                <label>Protocolo: SGP</label><br>
+                <label>Número de objetos/dia: 732</label><br>
+
+            </div>
 
         </div>
     </section>
@@ -242,7 +256,7 @@
             comando.onclick = function () {
             var cmd1 = document.getElementById('altera').value;
             console.log(cmd1);
-        
+       
             }
         }
 

@@ -56,7 +56,7 @@
     height: 770px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 10px;
 
 
@@ -72,7 +72,7 @@
     height: 55px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 10px;
 
 
@@ -87,7 +87,7 @@
     height: 680px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 10px;
 }
 
@@ -101,12 +101,13 @@
     height: 680px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 
     border-radius: 10px;
 
 
 }
+
 
 
 .item-5{
@@ -117,7 +118,7 @@
     height: 680px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 
 
 
@@ -143,20 +144,38 @@ body {
 }
 
 button{
-   
-    border-radius: 15px;
+    border-radius: 5px;
     width: 70px;
     height: 30px;
-     font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     margin-top: 20px;
     margin-left: 20px;
+    
     color: #fff;
     border-color: #f06560 ;
     background-color: #f06560;
 
 
 }
+#geral{
+    text-align: initial;
+    font-size: 16px;
+    margin-left: 20px;
+    line-height: 35px;
+    
+}
+
+h3{
+    text-align: initial;
+    margin-left: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+    text-align: center;
+}
+
 
 p{
     margin-left: 20px;
@@ -181,3 +200,10 @@ input{
     color: black;
     font-weight: bold;
 }
+
+
+.divBotao{
+    text-align: right;
+
+}
+
