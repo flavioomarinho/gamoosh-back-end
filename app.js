@@ -66,7 +66,8 @@ app.post('/recebe', (req, res) => {
         localizacao: req.body.localizacao
     }
     arrayObjetos.push(boxcubo);
-    substituiElemento(arrayObjetos, arrayObjetos.length);
+    manipulaArray();
+    
     res.send(boxcubo);
     
 })
@@ -114,14 +115,28 @@ app.get('/home', (req, res) => {
 
 
 function substituiElemento(array, tamanho) {
+    var contador = 0;
      for (var i = 0; i < tamanho; i++) {
         if (array[i].serie == array[tamanho - 1].serie) {
             array[i] = array[tamanho - 1];
-   
+            contador= contador + 1;
+            if(contador>1){
+                return true;
+            }
                    }
      }   
 }
 
+function removeUltimoElemento(array){
+    array.pop();
+}
+
+function manipulaArray(){
+    var retorno = substituiElemento(arrayObjetos, arrayObjetos.length);
+    if(retorno == true){
+        removeUltimoElemento(arrayObjetos);
+    }
+}
 
 
 app.listen(process.env.PORT || 3000);
