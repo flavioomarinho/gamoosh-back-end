@@ -20,11 +20,13 @@
 
     </section>
     <section class="container flex">
-        <div class="item-6">
-           <h1>CMDTESTSELF</h1>
+        <div class="title_box">
+            <div id="title"> Display BoxCubo</div>
+            <p>CMDSRV>192.168.25.69</p>
         </div>
-        <div class="item">
-            <h1 id="respostaPainel"></h1>
+        <div class="title_box">
+            <div id="title"> Display Painel</div>
+            <p>Comando enviado com sucesso!</p>
         </div>
     </section>
     <section class="container flex">
@@ -236,6 +238,11 @@
         <div class="item-1">
             <h2>Informações Gerais</h2>
             <div id="geral">
+                <label>Série: BC00039</label><br>
+                <label>IP: 192.168.1.79</label><br>
+                <label>Mac: b8-27-eb-b0-be-21 </label><br>
+                <label>Versão: 2.3r8</label><br>
+                <label>Erro: Aferição Instável</label><br>
                 <label>SRV: 192.168.1.59</label><br>
                 <label>Versão hardware: Raspberry Pi 3 Model B+</label><br>
                 <label>Reinicialização/dia: 8</label><br>
@@ -261,7 +268,7 @@
 
         var variavelLocal = localStorage.getItem("serie");
         if(variavelLocal != null)
-        var aux = variavelLocal.slice(17,24);
-        document.getElementById("painel").innerHTML = aux;
+      //  var aux = variavelLocal.slice(17,24);
+        document.getElementById("painel").innerHTML = variavelLocal;
 
     </script>

@@ -53,7 +53,7 @@
 	background: #f2f2f2;
 	text-align: left;
     width: 100%;
-    height: 770px;
+    height: 720px;
     border-style:  groove;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
@@ -162,7 +162,7 @@ button{
     text-align: initial;
     font-size: 15px;
     margin-left: 20px;
-    line-height: 35px;
+    line-height: 45px;
     
 }
 
@@ -174,13 +174,17 @@ h3{
 
 h2{
     text-align: center;
+    text-decoration: underline;
 }
 
 
 p{
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: justify;
+
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    
+   
 }
 
 input{
@@ -207,3 +211,23 @@ input{
 
 }
 
+.title_box {
+    width: 1000px;
+    height: 110px;
+    border-style:  groove;
+    border-radius: 10px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    padding-top: 8px;
+    font-weight: bolder ;
+    background-color: #f06560;
+  }
+  
+  .title_box #title {
+    position: relative;
+    top: -0.5em;
+    margin-left: 1em;
+    display: inline;
+
+  }
