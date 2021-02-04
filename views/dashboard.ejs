@@ -10,250 +10,316 @@
 </head>
 
 <body>
-    <section class="container flex">
-        <div class="item-2">
+    <div class="containerLogo">
+        <div class="logo">
             <a href="https://painelboxcubo.herokuapp.com/home"><img src="https://scc4.com.br/images/logo_boxcubo.png" width="200" height="50"></a>
         </div>
-        <div class="item-2">
-            <h1 id="painel"> Comando enviado com sucesso!</h1>
+        <div class="titulo">
+            <h2>Painel de Controle BoxCubo</h2>
         </div>
+    </div>
 
-    </section>
-    <section class="container flex">
-        <div class="title_box">
-            <div id="title"> Display BoxCubo</div>
-            <p>CMDSRV>192.168.25.69</p>
+    <div class="containerLogo">
+        <div class="painelBoxCubo">
+            <legend>Display BoxCubo</legend>
+            <h2>CMDTESTSELF</h2>
         </div>
-        <div class="title_box">
-            <div id="title"> Display Painel</div>
-            <p>Comando enviado com sucesso!</p>
+     <div class="displayPainel">
+            <legend>Display Painel de Controle</legend>
+            <h2>Comando enviado com sucesso!</h2>
         </div>
-    </section>
-    <section class="container flex">
-        <div class="item-1">
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDREBOOT">
-                <label for="reiniciar">Reiniciar software ..................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
+    
+    </div>
+    <div class="containerLogo">
+        <div class="informacoes">
+        <legend>Informações do Equipamento</legend>
 
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDRESTART">
-                <label for="reiniciarLinux">Reiniciar Linux ........................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDTESTMEDIA">
-                <label for="testarSensoresMedia">Testar Sensores Média ..........................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDTESTSELF">
-                <label for="testarSensores">Testar Sensores ......................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDCALIB>">
-                <label for="calibrar">Calibração .</label>
-                <input type="text" name="x" size="1" placeholder="comprimento">
-                <input type="text" name="y" size="1" placeholder="largura">
-                <input type="text" name="z" size="1" placeholder="profundidade">
-            
-
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDINVERSUS">
-                <label for="inverterSensores">Inverter Sensores ...................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="Comando" value="CMDTESTSTRESS">
-                <label for="stressSensores">Stress Sensores Nº .....................</label>
-                <input type="text" name="comando" size="5">
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDMDODSDIM">
-                <label for="modoBalanca">Modo Balança .........................................................</label>
-                <button type="sumit">Enviar</button>
-                              
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDMDOENDIM">
-                <label for="modoCubagem">Modo Cubagem ......................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDDSBUZZER">
-                <label for="desativaBuzzer">Desativar Buzzer .....................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDENBUZZER">
-                <label for="ativaBuzzer">Ativar Buzzer ...........................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDENCAM">
-                <label for="ativaCamera">Ativar Câmera .........................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-        </div>
-
-
-        <div class="item-1">
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDDSCAM">
-                <label for="desativaCamera">Ativar Câmera ........................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDSHOWIP">
-                <label for="mostrarIp">Mostrar IP ...............................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDSRV>">
-                <label for="alteraServidor">Alterar IP Servidor ..........</label>
-                <input type="text" name="comando" size="11">
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDNET">
-                <label for="alteraIp">Alterar IP Box ....................</label>
-                <input type="text" name="comando" size="10">
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDNET">
-                <label for="ipFixo">IP Fixo Box .........................</label>
-                <input type="text" name="comando" size="10">
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDENSSH">
-                <label for="ativaSsh">Ativar acesso SSh ...................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDDSSSH">
-                <label for="ativaSsh">Desativar SSH .........................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDWIFI">
-                <label for="mudarWifi">WIFI: </label>
-                <label for="ssid">SSID </label>
-                <input type="ssid" name="ssid" size="4">
-                <label for="senha">Senha </label>
-                <input type="text" name="senha" size="4">
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDENPLP">
-                <label for="ativaPlp">Ativar PLP ................................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDDSPLP">
-                <label for="ativaPlp">Desativar PLP ..........................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDSERIE>">
-                <label for="alteraSerie">Alterar Série ....</label>
-                <input type="text" name="serie" size="20">
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDCNPJ>">
-                <label for="alteraCnpj">Alterar CNPJ ....</label>
-                <input type="text" name="cnpj" size="20">
-                <button type="sumit">Enviar</button>
-            </form>
-
-        </div>
-        <div class="item-1">
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDBASH>PP">
-                <label for="integracaoPp">Integração Portal ....................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDBASH>SECTSOAP">
-                <label for="integracaoSectSoap">Integração Sect Soap .............................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-
-            <form action="/form" method="POST">
-                <input type="radio" name="comando" value="CMDBASH>SECTWS">
-                <label for="integracaoSectWs">Integração Sect WS ................................................</label>
-                <button type="sumit">Enviar</button>
-            </form>
-            <form action="/form" method="POST">
-                <input type="radio" id="nome" name="comando" value="CMDBASH>SGP">
-                <label for="integracaoSgp">Integração SGP .......................................................</label>
-                <button type="sumit">Enviar</button>
-            
-            </form>
-
-        </div>
-
-        <div class="item-1">
-            <h2>Informações Gerais</h2>
-            <div id="geral">
-                <label>Série: BC00039</label><br>
-                <label>IP: 192.168.1.79</label><br>
-                <label>Mac: b8-27-eb-b0-be-21 </label><br>
-                <label>Versão: 2.3r8</label><br>
-                <label>Erro: Aferição Instável</label><br>
-                <label>SRV: 192.168.1.59</label><br>
-                <label>Versão hardware: Raspberry Pi 3 Model B+</label><br>
-                <label>Reinicialização/dia: 8</label><br>
-                <label>Protocolo: SGP</label><br>
-                <label>Número de objetos/dia: 732</label><br>
-
+    </div>
+    </div>
+    
+    </div>
+    
+    
+        <div class="caixaTresElementos">
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Calibrar Sensores</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="x" size="2" placeholder="X" style="text-align: center;">
+                    <input type="text" name="y" size="2" placeholder="Y" style="text-align: center;">
+                    <input type="text" name="z" size="2" placeholder="Z" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
             </div>
 
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Teste Stress Sensores</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="testeStress" size="25" placeholder="Número de Iterações" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Alterar Endereço Servidor</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="enderecoServidor" size="25" placeholder="Endereço IP" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+            
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Alterar Endereço BoxCubo</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="enderecoBoxCubo" size="25" placeholder="Endereço IP" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Fixar Endereço BoxCubo</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="enderecoBoxCuboFixo" size="25" placeholder="Endereço IP" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Acessar Rede WIFI</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="SSID" size="8" placeholder="Login" style="text-align: center;">
+                    <input type="text" name="Senha" size="8" placeholder="Senha" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+            <div class="containerDiv">
+                <div class="cabecalho">
+                    <label>Alterar Número de Série</label>
+                </div>
+                <form action="/form" method="POST">
+                    <input type="text" name="numeroSerie" size="25" placeholder="Número de Série" style="text-align: center;">
+                    <button>Enviar</button>
+                </form>
+            </div>
         </div>
-    </section>
-</body>
+    
+
+    <div class="caixaTresElementos">
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Reiniciar BoxCubo</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Desligar BoxCubo</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Reiniciar Linux</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Teste Média Sensor</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Teste Self Sensor</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Inverter Sensores</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+        
+        <div class="containerDiv2">
+            <div class="cabecalho">
+                <label>Modo Balança</label>
+            </div>
+            <form action="/form" method="POST">
+                   <button class="botao">Enviar</button>
+            </form>
+        </div>
+</div>
+
+
+<div class="caixaTresElementos">
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Modo Cubagem</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Desligar Buzzer</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Ligar Buzzer</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Desligar Câmera</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Ligar Câmera</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Mostrar Endereço IP BoxCubo</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+    
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Ativar Acesso SSH</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="caixaTresElementos">
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Desativar Acesso SSH</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Ativar PLP</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Desativar PLP</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Integração Portal Postal</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Integração Sect Soap</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Integração Sect Web Service</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+    
+    <div class="containerDiv2">
+        <div class="cabecalho">
+            <label>Integração SGP</label>
+        </div>
+        <form action="/form" method="POST">
+               <button class="botao">Enviar</button>
+        </form>
+    </div>
+</div>
+
+
+</div>
+
+
+ </body>
 
 </html>
     <script>
