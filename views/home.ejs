@@ -5,6 +5,10 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <link rel='stylesheet' href='css/home.css'>
+
+<div class="cabecalho">
+
+</div>
 <table class="table table-striped">
 	<tr class="bg-info">
 		<th>Serie</th>
@@ -45,7 +49,7 @@
 				//var valorDaSerie =  document.getElementById("serieNode").innerHTML;
 				var valorDaSerie = "AGF Vieira de Morais";
 				localStorage.setItem("serie", JSON.stringify({valorDaSerie}));
-				location.assign('http://localhost:3000/dashboard');
+				location.assign('https://painelboxcubo.herokuapp.com/dashboard');
 			}
 
 		</script>
