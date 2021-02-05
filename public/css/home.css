@@ -10,3 +10,43 @@
 	button {
 		border-radius: 10px;
 	}
+
+	.logo{
+		width: 10%;
+		height: 65px;
+		background-color: #f2f2f2;
+		border-bottom: solid;
+		border-color: #595a5c;
+	  }
+	
+	
+	.titulo{
+		width: 90%;
+		height: 65px;
+		background-color: #f2f2f2;
+		color: #595a5c;
+		border-bottom: solid;
+		padding-top: 5px;
+	}
+
+	.containerLogo{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 5px;
+		margin-top: 5px;
+
+	}
+	
+	h2{
+		font-family: 'Open Sans', sans-serif;
+		text-align: center;
+		font-size: larger;
+		color: #595a5c;
+		margin-top: 10px;
+		font-weight: bolder;
+	}
+
+	body{
+		background-color:#f2f2f2 ;
+	}
