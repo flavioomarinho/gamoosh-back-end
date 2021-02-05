@@ -21,7 +21,7 @@
 	
 	
 	.titulo{
-		width: 90%;
+		width: 85%;
 		height: 65px;
 		background-color: #f2f2f2;
 		color: #595a5c;
@@ -35,6 +35,7 @@
 		flex-direction: row;
 		margin-bottom: 5px;
 		margin-top: 5px;
+		text-align: right;
 
 	}
 	
@@ -49,4 +50,24 @@
 
 	body{
 		background-color:#f2f2f2 ;
+	}
+
+	a{
+		font-family: 'Open Sans', sans-serif;
+		text-align: center;
+		font-size: small;
+		color: #595a5c;
+		margin-top: 10px;
+		text-decoration: underline;		
+	}
+
+
+	.sair{
+		width: 5%;
+		height: 65px;
+		background-color: #f2f2f2;
+		color: #595a5c;
+		border-bottom: solid;
+		padding-top: 25px;
+		padding-right: 20px;
 	}
