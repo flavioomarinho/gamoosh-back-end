@@ -1,34 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-.logo{
-    position: absolute;
-    top: 14%;
-    left: 7%;
-}
 
-.container{
-	width: 380px;
-	height: 400px;
+.box{
+	width: 300px;
+	height: 300px;
 	background-color: #f2f2f2;
-	border-radius: 25px;
-	position: absolute;
-	top: 25%;
-	left: 42%;
+	border-radius: 10px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: black;
-	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.login{
-	position: absolute;
-	top: 45%;
-	left: 18%;
 
+
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.logo{
+	margin: 20px;
 }
 
 input{
-	margin-top: 10px;
 	width: 240px;
 	height: 30px;
 	border-style: outset;
@@ -36,23 +38,31 @@ input{
 	border-radius: 5px;
 	font-family: 'Open Sans', sans-serif;
 	border-width: 1px;
+	margin: 0px;
 }
 
 button{
-	position: absolute;
-	top: 100%;
-	left: 0%;
-	width: 240px;
+
+	width: 200px;
 	height: 40px;
 	border-radius: 10px;
 	border-color: black;
 	border-width: 1px;
-	background: #f06560;
+	background: linear-gradient(#595a5c, #f06560);
 	font-family: 'Open Sans', sans-serif;
-	font-weight: bold;
+	font-weight: bolder;
 	color: black;
+	
 }
 
 body{
 	background: linear-gradient(#595a5c, #f06560);
+	margin: 0px;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
