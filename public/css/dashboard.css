@@ -1,14 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-.flex {
-	display: flex;
-}
-
-.flex-wrap {
-	flex-wrap: wrap;
-}
 .logo{
-    width: 10%;
+    width: 30%;
     height: 55px;
     background-color: #f2f2f2;
     border-bottom: solid;
@@ -17,12 +10,26 @@
 
 
 .titulo{
-    width: 90%;
+    width: 60%;
     height: 55px;
     background-color: #f2f2f2;
     color: #595a5c;
     border-bottom: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: initial;
  
+}
+
+.sair{
+    width: 10%;
+    height: 55px;
+    background-color: #f2f2f2;
+    color: #595a5c;
+    border-bottom: solid;
+    padding-right: 20px;
+    text-align: center;
 }
 .painelBoxCubo{
 width: 50%;
@@ -52,6 +59,13 @@ margin-left: 5px;
 margin-right: auto;
 }
 
+#sair{
+    padding-top: 10px;
+    font-size: small;
+    color: #595a5c;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
 
 .informacoes{
     width: 100%;
@@ -72,9 +86,10 @@ h2{
 }
 
 .containerLogo{
-    width: 100%;
     display: flex;
-    flex-direction: row;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 h1 {

@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Dashboard</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='css/dashboard.css'>
-</head>
-
-<body>
     <div class="containerLogo">
         <div class="logo">
             <a href="https://painelboxcubo.herokuapp.com/home"><img src="https://scc4.com.br/images/logo_boxcubo.png" width="200" height="50"></a>
         </div>
         <div class="titulo">
             <h2>Painel de Controle BoxCubo</h2>
+        </div>
+        <div class="sair">
+            <h2 id="sair"><a href="https://painelboxcubo.herokuapp.com/">Sair</a></h2>
         </div>
     </div>
 
@@ -28,15 +20,12 @@
             <legend>Display Painel de Controle</legend>
             <h2>Comando enviado com sucesso!</h2>
         </div>
-    
     </div>
+
     <div class="containerLogo">
         <div class="informacoes">
         <legend>Informações do Equipamento</legend>
-
     </div>
-    </div>
-    
     </div>
     
     
@@ -305,13 +294,6 @@
     </div>
 </div>
 
-
-</div>
-
-
- </body>
-
-</html>
     <script>
         var comando = document.getElementById('comando');
         if(comando != null){

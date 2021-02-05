@@ -12,27 +12,46 @@
 	}
 
 	.logo{
-		width: 10%;
+		width: 30%;
 		height: 65px;
 		background-color: #f2f2f2;
 		border-bottom: solid;
 		border-color: #595a5c;
+		display: flex;
+		flex-direction: row;
+		justify-content: initial;
+		align-items: initial;
 	  }
 	
 	
 	.titulo{
-		width: 85%;
+		width: 60%;
 		height: 65px;
 		background-color: #f2f2f2;
 		color: #595a5c;
 		border-bottom: solid;
 		padding-top: 5px;
-	}
-
-	.containerLogo{
-		width: 100%;
 		display: flex;
 		flex-direction: row;
+		justify-content: initial;
+		align-items: initial;
+	}
+	
+	.sair{
+		width: 10%;
+		height: 65px;
+		background-color: #f2f2f2;
+		color: #595a5c;
+		border-bottom: solid;
+		padding-top: 25px;
+		padding-right: 20px;
+		text-align: center;
+	}
+	.containerLogo{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		margin-bottom: 5px;
 		margin-top: 5px;
 		text-align: right;
@@ -62,12 +81,4 @@
 	}
 
 
-	.sair{
-		width: 5%;
-		height: 65px;
-		background-color: #f2f2f2;
-		color: #595a5c;
-		border-bottom: solid;
-		padding-top: 25px;
-		padding-right: 20px;
-	}
+	
