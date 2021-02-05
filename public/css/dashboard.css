@@ -35,7 +35,7 @@
 width: 50%;
 height: 140px;
 background-color:  #66aec7;
-margin-left: auto;
+margin-left: 5px;
 margin-right: 5px;
 margin-top: 25px;
 }
@@ -56,7 +56,7 @@ height: 140px;
 background-color: #f4cdc8;
 margin-top: 25px;
 margin-left: 5px;
-margin-right: auto;
+margin-right: 5px;
 }
 
 #sair{
@@ -72,8 +72,8 @@ margin-right: auto;
     height: 140px;
     background-color: thistle;
     margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
