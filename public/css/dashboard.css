@@ -180,8 +180,3 @@ input{
     flex: 2;
 }
 
-@media (max-width: 1200px) {
-    .caixaTresElementos {
-      flex-direction: column;
-    }
-  }
