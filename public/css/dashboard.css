@@ -38,6 +38,7 @@ background-color:  #66aec7;
 margin-left: 5px;
 margin-right: 5px;
 margin-top: 25px;
+border-radius: 7px;
 }
 
 legend{
@@ -57,6 +58,7 @@ background-color: #f4cdc8;
 margin-top: 25px;
 margin-left: 5px;
 margin-right: 5px;
+border-radius: 7px;
 }
 
 #sair{
@@ -74,6 +76,7 @@ margin-right: 5px;
     margin-top: 25px;
     margin-left: 5px;
     margin-right: 5px;
+    border-radius: 7px;
 }
 
 
