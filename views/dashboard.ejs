@@ -7,14 +7,14 @@
             <h2>Painel de Controle BoxCubo</h2>
         </div>
         <div class="sair">
-            <h2 id="sair"><a href="https://painelboxcubo.herokuapp.com/">Sair</a></h2>
+
         </div>
     </div>
 
     <div class="containerLogo">
         <div class="painelBoxCubo">
             <legend>Display BoxCubo</legend>
-            <h2>CMDTESTSELF</h2>
+            <label></label>
         </div>
      <div class="displayPainel">
             <legend>Display Painel de Controle</legend>
@@ -300,10 +300,11 @@
             comando.onclick = function () {
             var cmd1 = document.getElementById('comando').value;
             console.log(cmd1);
-       
+                       
             }
         }
 
+      
         var variavelLocal = localStorage.getItem("serie");
         if(variavelLocal != null)
       //  var aux = variavelLocal.slice(17,24);
