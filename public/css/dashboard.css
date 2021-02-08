@@ -33,7 +33,7 @@
 }
 .painelBoxCubo{
 width: 50%;
-height: 140px;
+height: 48px;
 background-color:  #66aec7;
 margin-left: 5px;
 margin-right: 5px;
@@ -53,7 +53,7 @@ legend{
 }
 .displayPainel{
 width: 50%;
-height: 140px;
+height: 48px;
 background-color: #f4cdc8;
 margin-top: 25px;
 margin-left: 5px;
@@ -211,16 +211,29 @@ input{
     width: 451px;
     height: 40px;
     margin: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+
     color: #595a5c;
     border: solid;
     border-radius: 5px;
     border-width: 1px;
     border-color: #595a5c ;
-   
+    align-items: center;
+    text-align: justify;
+
 }
 
 h3{
     margin-left: 10px;
+}
+
+.labelInfo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding: 10px;  
+    color: #595a5c;
+    font-weight: bolder;
+    display: inline-flex;
+    flex-wrap: initial;
+    flex-direction: row;
+
 }
