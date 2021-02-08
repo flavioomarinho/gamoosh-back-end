@@ -12,7 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
-let serie= "BC00236", ip ="192.168.25.34", srv ="192.168.1.23", mac = "b8-27-eb-b0-be-25", erro = "Aferição Instável", protocolo = "SGP", reinicializacao = "8", processados = "758";
+let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados;
 let cmd;
 let userLogged;
 
@@ -65,6 +65,16 @@ app.post('/recebe', (req, res) => {
         versao: req.body.versao,
         localizacao: req.body.localizacao
     }
+
+    serie = req.body.serie;
+    mac = req.body.mac;
+    ip = req.body.ip;
+    srv = req.body.srv;
+    erro = req.body.erro;
+    protocolo = req.body.protocolo;
+    reinicializacao = req.body.reinicializacao;
+    processados = req.body.processados;
+
     arrayObjetos.push(boxcubo);
     manipulaArray();
     
