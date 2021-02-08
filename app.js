@@ -88,6 +88,9 @@ app.get('/comando', function(req,res){
     if(req.body.comando != null){
         mensagemBox = req.body.comando;
         mensagemPainel = "Comando enviado com sucesso!"
+    }else{
+        mensagemBox = "Erro";
+        mensagemPainel = "Erro ao enviar comando!"
     }
 
     res.render(
