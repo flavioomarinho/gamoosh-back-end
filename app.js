@@ -12,7 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
-let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox, mensagemPainel;
+let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel ="teste";
 let cmd;
 let userLogged;
 
@@ -93,10 +93,7 @@ app.get('/comando', function(req,res){
         mensagemPainel = "Erro ao enviar comando!"
     }
 
-    res.render(
-        'dashboard',
-        {mensagemBox, mensagemPainel}
-    )
+   
     res.send(cmd);
 })
 
@@ -113,7 +110,7 @@ app.get('/dashboard', function (req, res) {
     if (userLogged) {
         res.render(
             'dashboard',
-          {serie, ip, srv, mac, erro, protocolo, reinicializacao, processados}  
+          {serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox, mensagemPainel}  
             );
     } else {
         res.redirect('/')
