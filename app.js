@@ -87,6 +87,9 @@ app.post('/recebe', (req, res) => {
 app.get('/comando', function(req,res){
         mensagemBox = req.body.comando;
         mensagemPainel = "Comando enviado com sucesso!";
+        res.render('dashboard',
+        {mensagemPainel, mensagemBox}
+        );
         res.send(cmd);
 })
 
