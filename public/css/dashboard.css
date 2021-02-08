@@ -208,7 +208,7 @@ input{
 }
 
 .info{
-    width: 451px;
+    width: 440px;
     height: 40px;
     margin: 10px;
 
@@ -234,5 +234,10 @@ h3{
     display: inline-flex;
     flex-wrap: initial;
     flex-direction: row;
+
+}
+
+.botaoInfo{
+    width: 300px;
 
 }
