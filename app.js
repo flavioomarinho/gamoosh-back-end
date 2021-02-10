@@ -77,7 +77,7 @@ app.post('/recebe', (req, res) => {
 
     arrayObjetos.push(boxcubo);
     manipulaArray();
-    
+   
     res.send(boxcubo);
     
 })
@@ -150,6 +150,10 @@ function manipulaArray(){
         removeUltimoElemento(arrayObjetos);
     }
 }
+
+
+
+
 
 
 app.listen(process.env.PORT || 3000);
