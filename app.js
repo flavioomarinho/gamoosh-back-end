@@ -52,7 +52,6 @@ app.post('/login', (req, res) => {
         })
 })
 
-
 //Recebe os dados da Rasp
 app.post('/recebe', (req, res) => {
     boxcubo = {
@@ -65,7 +64,6 @@ app.post('/recebe', (req, res) => {
         versao: req.body.versao,
         localizacao: req.body.localizacao
     }
-
     serie = req.body.serie;
     mac = req.body.mac;
     ip = req.body.ip;
@@ -74,14 +72,10 @@ app.post('/recebe', (req, res) => {
     protocolo = req.body.protocolo;
     reinicializacao = req.body.reinicializacao;
     processados = req.body.processados;
-
     arrayObjetos.push(boxcubo);
     manipulaArray();
-   
     res.send(boxcubo);
-    
 })
-
 
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
@@ -97,7 +91,6 @@ app.post('/form', (req, res)=>{
     console.log(cmd);
     res.redirect('/dashboard');
 })
-
  
 //Renderiza painel controle
 app.get('/dashboard', function (req, res) {
@@ -125,8 +118,6 @@ app.get('/home', (req, res) => {
     })
 })
 
-
-
 function substituiElemento(array, tamanho) {
     var contador = 0;
      for (var i = 0; i < tamanho; i++) {
@@ -150,11 +141,6 @@ function manipulaArray(){
         removeUltimoElemento(arrayObjetos);
     }
 }
-
-
-
-
-
 
 app.listen(process.env.PORT || 3000);
 

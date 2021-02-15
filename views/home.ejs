@@ -33,9 +33,8 @@
 
 	<tbody id="myTable">
 		<% for(var i = 0; i < arrayObjetos.length; ++ i) { %>
-
 		<tr id="linha">
-			<td id="serieNode"><%=arrayObjetos[i].serie%></td>
+			<td><%=arrayObjetos[i].serie%></td>
 			<td><%=arrayObjetos[i].mac%></td>
 			<td><%=arrayObjetos[i].ip%></td>
 			<td><%=arrayObjetos[i].estado%></td>
@@ -50,9 +49,8 @@
 	</table>
 		<script>
 			function redireciona() {
-				location.assign('https://painelboxcubo.herokuapp.com/dashboard');
+				location.assign('http://localhost:3000/dashboard');
 			}
-
 		</script>
 		<script>
 			setInterval(function () {
