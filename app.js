@@ -12,7 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
-let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel ="teste";
+let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel ="teste", elementoBusca;
 let cmd;
 let userLogged;
 
@@ -62,16 +62,13 @@ app.post('/recebe', (req, res) => {
         calibracao: req.body.calibracao,
         erro: req.body.erro,
         versao: req.body.versao,
-        localizacao: req.body.localizacao
+        localizacao: req.body.localizacao,
+        srv : req.body.srv,
+        protocolo : req.body.protocolo,
+        reinicializacao : req.body.reinicializacao,
+        processados : req.body.processados
     }
-    serie = req.body.serie;
-    mac = req.body.mac;
-    ip = req.body.ip;
-    srv = req.body.srv;
-    erro = req.body.erro;
-    protocolo = req.body.protocolo;
-    reinicializacao = req.body.reinicializacao;
-    processados = req.body.processados;
+ 
     arrayObjetos.push(boxcubo);
     manipulaArray();
     res.send(boxcubo);
@@ -112,10 +109,18 @@ app.get('/home', (req, res) => {
                 'home',
                 {
                     arrayObjetos
+                        
                 }
             );
         }
     })
+})
+
+app.post('/interaction', (req,res,next)=>{
+    console.log(req.query.serie);
+    elementoBusca = req.query.serie;
+    renderizaInfoDashboard(elementoBusca,arrayObjetos);
+    return res.redirect('http://localhost:3000/dashboard')
 })
 
 function substituiElemento(array, tamanho) {
@@ -127,8 +132,25 @@ function substituiElemento(array, tamanho) {
             if(contador>1){
                 return true;
             }
-                   }
+        }
      }   
+}
+
+function renderizaInfoDashboard(id,array){
+    for(var i=0; i<array.length;i++){
+        if(id == array[i].serie){
+            serie = array[i].serie;
+            mac = array[i].mac;
+            ip = array[i].ip;
+            srv = array[i].srv;
+            erro = array[i].erro;
+            protocolo = array[i].protocolo;
+            reinicializacao = array[i].reinicializacao;
+            processados = array[i].processados;
+        }
+
+    }
+    
 }
 
 function removeUltimoElemento(array){
