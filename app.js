@@ -76,8 +76,7 @@ app.post('/recebe', (req, res) => {
 
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
-        mensagemBox = req.body.comando;
-        mensagemPainel = "Comando enviado com sucesso!";
+        
         res.redirect('/dashboard');
         res.send(cmd);
 })
@@ -86,6 +85,7 @@ app.get('/comando', function(req,res){
 app.post('/form', (req, res)=>{
     cmd = req.body;
     console.log(cmd);
+    mensagemPainel = "Comando enviado com sucesso!";
     res.redirect('/dashboard');
 })
  
