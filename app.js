@@ -86,7 +86,7 @@ app.post('/form', (req, res)=>{
     cmd = req.body;
     console.log(cmd);
     mensagemBox = cmd.comando;
-    mensagemPainel = "Comando enviado"+ mensagemBox + " com sucesso!";
+    mensagemPainel = "Comando " +" "+ mensagemBox + " enviado com sucesso!";
     res.redirect('/dashboard');
 })
  
