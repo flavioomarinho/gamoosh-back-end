@@ -120,7 +120,7 @@ app.post('/interaction', (req,res,next)=>{
     console.log(req.query.serie);
     elementoBusca = req.query.serie;
     renderizaInfoDashboard(elementoBusca,arrayObjetos);
-    return res.redirect('http://localhost:3000/dashboard')
+    return res.redirect('https://painelboxcubo.herokuapp.com/dashboard')
 })
 
 function substituiElemento(array, tamanho) {
