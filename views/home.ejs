@@ -44,7 +44,7 @@
 				<td><%=arrayObjetos[i].versao%></td>
 				<td><%=arrayObjetos[i].localizacao%></td>
 				<td>
-					<form autocomplete="off" action="/interaction?serie=<%=arrayObjetos[i].serie%>" method="post">
+					<form id="formulario" autocomplete="off" action="/interaction?serie=<%=arrayObjetos[i].serie%>" method="post">
 						<button id="detalhes" type="submit">Detalhes</button>
 					</form>
 				</td>
