@@ -4,7 +4,6 @@
         if(comando != null){
             comando.onclick = function () {
             cmd1 = document.getElementById('comando').value;
-            console.log(cmd1);
             }
         };
 

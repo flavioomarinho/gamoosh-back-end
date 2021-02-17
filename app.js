@@ -76,6 +76,11 @@ app.post('/recebe', (req, res) => {
     res.send(boxcubo);
 })
 
+app.post('/infodisplay',(req,res) =>{
+    mensagemBox = req.body.mensagem;
+    res.send("Mensagem recebida!");
+})
+
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
        // res.redirect('/dashboard');
