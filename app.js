@@ -195,6 +195,8 @@ function preparaComando(cmd){
     }else if(cmd.comando == 'CMDSERIE>'){
         return cmd.comando + cmd.numeroSerie;
 
+    }else if(cmd.comando == 'CMDNETS'){
+        return cmd.comando + cmd.enderecoBoxCuboFixo;
     }else{
         return cmd.comando;
     }
