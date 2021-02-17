@@ -79,7 +79,7 @@ app.post('/recebe', (req, res) => {
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
         res.redirect('/dashboard');
-        res.send(cmd);
+        res.send("Deu certo!");
 })
 
 //Recebe comando painel
