@@ -136,6 +136,7 @@ app.post('/interaction', (req,res,next)=>{
     elementoBusca = req.query.serie;
     renderizaInfoDashboard(elementoBusca,arrayObjetos);
     mensagemPainel ="Bem vindo ao painel de controle BoxCubo";
+    mensagemBox = "Bem vindo a BoxCubo!";
     return res.redirect('https://painelboxcubo.herokuapp.com/dashboard')
 })
 
