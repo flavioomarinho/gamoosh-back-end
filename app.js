@@ -84,7 +84,8 @@ app.get('/comando', function(req,res){
 //Recebe comando painel
 app.post('/form', (req, res)=>{
     cmd = req.body;
-    console.log(cmd);
+    console.log(processaComando(elementoBusca,cmd));
+
     mensagemBox = cmd.comando;
     mensagemPainel = "Comando " +" "+ mensagemBox + " enviado com sucesso!";
     res.redirect('/dashboard');
@@ -169,6 +170,12 @@ function manipulaArray(){
         removeUltimoElemento(arrayObjetos);
     }
 }
+
+function processaComando(id, comando){
+    return "#"+id+","+comando;
+
+}
+
 
 app.listen(process.env.PORT || 3000);
 
