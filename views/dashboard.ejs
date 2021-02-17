@@ -332,15 +332,20 @@
 
 
 <script>
+        var cmd1;
         var comando = document.getElementById('comando');
         if(comando != null){
             comando.onclick = function () {
-            var cmd1 = document.getElementById('comando').value;
+            cmd1 = document.getElementById('comando').value;
             console.log(cmd1);
             }
         };
+
+	window.setTimeout(function () {
+  window.location.reload();
+  cmd1 = "Bem vindo ao painel de controle BoxCubo";
+}, 60000);
+
 </script>
-
-
    
     
