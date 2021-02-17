@@ -12,7 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
-let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel ="Bem vindo ao painel de controle BoxCubo", elementoBusca;
+let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel, elementoBusca;
 let cmd;
 let userLogged;
 
@@ -117,13 +117,17 @@ app.get('/home', (req, res) => {
     })
 })
 
+
+//Recebe elemento id
 app.post('/interaction', (req,res,next)=>{
     console.log(req.query.serie);
     elementoBusca = req.query.serie;
     renderizaInfoDashboard(elementoBusca,arrayObjetos);
+    mensagemPainel ="Bem vindo ao painel de controle BoxCubo";
     return res.redirect('https://painelboxcubo.herokuapp.com/dashboard')
 })
 
+//Substitui elemento array
 function substituiElemento(array, tamanho) {
     var contador = 0;
      for (var i = 0; i < tamanho; i++) {
@@ -137,6 +141,7 @@ function substituiElemento(array, tamanho) {
      }   
 }
 
+//Rederiza elementos tela Dashboard
 function renderizaInfoDashboard(id,array){
     for(var i=0; i<array.length;i++){
         if(id == array[i].serie){
