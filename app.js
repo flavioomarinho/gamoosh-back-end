@@ -78,7 +78,7 @@ app.post('/recebe', (req, res) => {
 
 app.post('/infodisplay',(req,res) =>{
     mensagemBox = req.body.mensagem;
-    res.send("Mensagem recebida!");
+    res.send("Mensagem recebida com sucesso!");
 })
 
 //Máquina lê estado comando
