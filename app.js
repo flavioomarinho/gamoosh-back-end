@@ -12,7 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
-let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel, elementoBusca;
+let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel, elementoBusca, resultaComando;
 let cmd;
 let userLogged;
 
@@ -79,7 +79,7 @@ app.post('/recebe', (req, res) => {
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
         res.redirect('/dashboard');
-        res.send(cmd);
+        res.send(resultaComando);
 })
 
 //Recebe comando painel
@@ -87,7 +87,8 @@ app.post('/form', (req, res)=>{
     cmd = req.body;
     mensagemBox = cmd.comando;
     mensagemPainel = "Comando " +" "+ mensagemBox + " enviado com sucesso!";
-    console.log(processaComando(elementoBusca, preparaComando(cmd)));
+    resultaComando = processaComando(elementoBusca, preparaComando(cmd));
+    console.log(resultaComando);
     res.redirect('/dashboard');
 })
  
