@@ -172,7 +172,7 @@ function manipulaArray(){
 }
 
 function processaComando(id, comando){
-    return "#"+id+"#"+comando;
+return "serie : "+id+"<br>"+"comando :"+comando;
 
 }
 
