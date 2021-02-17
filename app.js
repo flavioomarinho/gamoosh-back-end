@@ -12,7 +12,7 @@ const app = express()
 var publicDir = require('path').join(__dirname, '/public');
 let arrayObjetos = [];
 let boxcubo = {};
-let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="teste", mensagemPainel, elementoBusca, resultaComando;
+let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="Bem vindo a BoxBucha", mensagemPainel, elementoBusca, resultaComando, serieMensagem;
 let cmd;
 let userLogged;
 
@@ -77,7 +77,12 @@ app.post('/recebe', (req, res) => {
 })
 
 app.post('/infodisplay',(req,res) =>{
-    mensagemBox = req.body.mensagem;
+    serieMensagem = req.body.serie;
+    if(serieMensagem == elementoBusca){
+        mensagemBox = req.body.mensagem;
+    }else{
+        mensagemBox = "Bem vindo a BoxCubo!";
+    }
     res.send("Mensagem recebida com sucesso!");
 })
 
