@@ -84,7 +84,7 @@ app.get('/comando', function(req,res){
 //Recebe comando painel
 app.post('/form', (req, res)=>{
     cmd = req.body;
-    console.log(processaComando(elementoBusca,cmd));
+    console.log(processaComando(elementoBusca,cmd,toString()));
 
     mensagemBox = cmd.comando;
     mensagemPainel = "Comando " +" "+ mensagemBox + " enviado com sucesso!";
