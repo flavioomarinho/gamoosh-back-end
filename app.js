@@ -78,7 +78,6 @@ app.post('/recebe', (req, res) => {
 
 //Máquina lê estado comando
 app.get('/comando', function(req,res){
-        
         res.redirect('/dashboard');
         res.send(cmd);
 })
@@ -86,10 +85,9 @@ app.get('/comando', function(req,res){
 //Recebe comando painel
 app.post('/form', (req, res)=>{
     cmd = req.body;
-    console.log(processaComando(elementoBusca,cmd.comando));
-
     mensagemBox = cmd.comando;
     mensagemPainel = "Comando " +" "+ mensagemBox + " enviado com sucesso!";
+    console.log(processaComando(elementoBusca, preparaComando(cmd)));
     res.redirect('/dashboard');
 })
  
@@ -178,6 +176,30 @@ return "'serie' : "+id+","+"'comando':"+comando;
 
 }
 
+function preparaComando(cmd){
+    if(cmd.comando == 'CMDCALIB>'){
+        return cmd.comando + '0' + (cmd.x*10) + '0'+ (cmd.y*10) +'0'+ (cmd.y*10);
+
+    }else if(cmd.comando == 'CMDSTRESS>'){
+        return cmd.comando + cmd.testeStress;
+
+    }else if(cmd.comando == 'CMDSRV>'){
+        return cmd.comando + cmd.enderecoServidor;
+
+    }else if(cmd.comando == 'CMDNET>'){
+        return cmd.comando + cmd.enderecoBoxCubo;
+
+    }else if(cmd.comando == 'CMDWIFI>'){
+        return cmd.comando + cmd.SSID + cmd.Senha;
+
+    }else if(cmd.comando == 'CMDSERIE>'){
+        return cmd.comando + cmd.numeroSerie;
+
+    }else{
+        return cmd.comando;
+    }
+
+}
 
 app.listen(process.env.PORT || 3000);
 
