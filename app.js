@@ -70,7 +70,6 @@ app.post('/recebe', (req, res) => {
         reinicializacao : req.body.reinicializacao,
         processados : req.body.processados
     }
-    console.log( req.body.srv);
     arrayObjetos.push(boxcubo);
     manipulaArray();
     res.send(boxcubo);
