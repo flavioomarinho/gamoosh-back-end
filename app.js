@@ -81,7 +81,7 @@ app.post('/infodisplay',(req,res) =>{
     if(serieMensagem == elementoBusca){
         mensagemBox = req.body.mensagem;
     }else{
-        mensagemBox = "Bem vindo a BoxCubo!!";
+        mensagemBox = "Bem vindo a BoxCubo!";
     }
     res.send("Mensagem recebida com sucesso!");
 })
