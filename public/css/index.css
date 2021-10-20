@@ -48,14 +48,14 @@ button{
 	border-radius: 10px;
 	border-color: black;
 	border-width: 1px;
-	background: #df6460;
+	background: #00BFFF;
 	font-family: 'Open Sans', sans-serif;
 	color: black;
 	
 }
 
 body{
-	background: linear-gradient(#595a5c, #f06560);
+	background: linear-gradient(#595a5c, #00BFFF);
 	margin: 0px;
 }
 
