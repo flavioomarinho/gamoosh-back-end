@@ -2,8 +2,8 @@
 
 
 .box{
-	width: 300px;
-	height: 300px;
+	width: 800px;
+	height: 800px;
 	background-color: #00BFFF;
 	border-radius: 10px;
 	border-style: solid;
@@ -27,7 +27,7 @@
 }
 
 .logo{
-	margin: 20px;
+	margin: 500px;
 }
 
 input{
