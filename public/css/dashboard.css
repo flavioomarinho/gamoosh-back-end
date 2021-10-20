@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 .logo{
-    width: 30%;
+    width: 70%;
     height: 55px;
     background-color: #f2f2f2;
     border-bottom: solid;
@@ -10,7 +10,7 @@
 
 
 .titulo{
-    width: 60%;
+    width: 40%;
     height: 55px;
     background-color: #f2f2f2;
     color: #595a5c;
@@ -23,7 +23,7 @@
 }
 
 .sair{
-    width: 10%;
+    width: 35%;
     height: 55px;
     background-color: #f2f2f2;
     color: #595a5c;
