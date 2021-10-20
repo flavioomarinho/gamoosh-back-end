@@ -2,9 +2,9 @@
 
 
 .box{
-	width: 800px;
-	height: 800px;
-	background-color: #595a5c;
+	width: 300px;
+	height: 300px;
+	background-color: #f2f2f2;
 	border-radius: 10px;
 	border-style: solid;
 	border-width: 1px;
@@ -27,7 +27,7 @@
 }
 
 .logo{
-	margin: 500px;
+	margin: 20px;
 }
 
 input{
@@ -46,16 +46,16 @@ button{
 	width: 200px;
 	height: 40px;
 	border-radius: 10px;
-	border-color: 00BFFF;
+	border-color: black;
 	border-width: 1px;
-	background: #595a5c;
+	background: #df6460;
 	font-family: 'Open Sans', sans-serif;
-	color: 00BFFF;
+	color: black;
 	
 }
 
 body{
-	background: linear-gradient(#DC143C, #00BFFF);
+	background: linear-gradient(#595a5c, #f06560);
 	margin: 0px;
 }
 

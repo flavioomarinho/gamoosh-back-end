@@ -4,7 +4,7 @@
 		font-family: 'Open Sans', sans-serif;
 		font-size: small;
 		color: white;
-		background-color: #000000;
+		background-color: #f06560;
 	}
 
 	button {
@@ -14,7 +14,7 @@
 	.logo{
 		width: 30%;
 		height: 65px;
-		background-color: #595a5c;
+		background-color: #f2f2f2;
 		border-bottom: solid;
 		border-color: #595a5c;
 		display: flex;
@@ -27,7 +27,7 @@
 	.titulo{
 		width: 60%;
 		height: 65px;
-		background-color: #595a5c;
+		background-color: #f2f2f2;
 		color: #595a5c;
 		border-bottom: solid;
 		padding-top: 5px;
@@ -40,7 +40,7 @@
 	.sair{
 		width: 10%;
 		height: 65px;
-		background-color: #595a5c;
+		background-color: #f2f2f2;
 		color: #595a5c;
 		border-bottom: solid;
 		padding-top: 25px;
