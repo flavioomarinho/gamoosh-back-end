@@ -4,7 +4,7 @@
 .box{
 	width: 800px;
 	height: 800px;
-	background-color: #DC143C;
+	background-color: ##000000;
 	border-radius: 10px;
 	border-style: solid;
 	border-width: 1px;
@@ -34,7 +34,7 @@ input{
 	width: 240px;
 	height: 30px;
 	border-style: outset;
-	color:  #DC143C;
+	color:  ##000000;
 	border-radius: 5px;
 	font-family: 'Open Sans', sans-serif;
 	border-width: 1px;
