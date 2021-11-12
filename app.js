@@ -76,7 +76,7 @@ app.post('/login', (req, res) => {
 })**/
 app.post('/recebe',(req, res) =>{
     let name = req.body.nome;
-    console.log('Meu nome é'+name);
+    console.log("deu certo");
 
 })
 
