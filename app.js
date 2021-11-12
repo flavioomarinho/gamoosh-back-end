@@ -79,7 +79,7 @@ app.post('/login', (req, res) => {
 app.post('/recebe',(req, res) =>{
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8100');
     nome = req.body.nome;
-    console.log("deu certo");
+    console.log("Meu nome é: "+nome);
     res.send(nome);
 })
 
