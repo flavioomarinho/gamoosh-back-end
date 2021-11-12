@@ -75,9 +75,7 @@ app.post('/login', (req, res) => {
     res.send(boxcubo);
 })**/
 app.post('/recebe',(req, res) =>{
-    let name = req.body.nome;
     console.log("deu certo");
-
 })
 
 app.post('/infodisplay',(req,res) =>{
