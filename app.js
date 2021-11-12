@@ -10,12 +10,14 @@ const { REFUSED } = require('dns');
 const { read } = require('fs');
 const app = express()
 var publicDir = require('path').join(__dirname, '/public');
+var cors = require('cors');
 let arrayObjetos = [];
 let boxcubo = {};
 let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="Bem vindo a BoxBucha", mensagemPainel, elementoBusca, resultaComando, serieMensagem;
 let cmd;
 let userLogged;
 let nome;
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(publicDir));
