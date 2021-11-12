@@ -55,7 +55,7 @@ app.post('/login', (req, res) => {
 })
 
 //Recebe os dados da Rasp
-app.post('/recebe', (req, res) => {
+/**app.post('/recebe', (req, res) => {
     boxcubo = {
         serie: req.body.serie,
         mac: req.body.mac,
@@ -73,6 +73,11 @@ app.post('/recebe', (req, res) => {
     arrayObjetos.push(boxcubo);
     manipulaArray();
     res.send(boxcubo);
+})**/
+app.post('/recebe',(req, res) =>{
+    let name = req.body.nome;
+    console.log('Meu nome é'+name);
+
 })
 
 app.post('/infodisplay',(req,res) =>{
