@@ -15,7 +15,7 @@ let boxcubo = {};
 let serie, ip, srv, mac, erro, protocolo, reinicializacao, processados, mensagemBox ="Bem vindo a BoxBucha", mensagemPainel, elementoBusca, resultaComando, serieMensagem;
 let cmd;
 let userLogged;
-
+let nome;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(publicDir));
@@ -75,7 +75,9 @@ app.post('/login', (req, res) => {
     res.send(boxcubo);
 })**/
 app.post('/recebe',(req, res) =>{
+    nome = req.body.nome;
     console.log("deu certo");
+    res.send(nome);
 })
 
 app.post('/infodisplay',(req,res) =>{
