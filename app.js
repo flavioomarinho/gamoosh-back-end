@@ -75,6 +75,7 @@ app.post('/login', (req, res) => {
     res.send(boxcubo);
 })**/
 app.post('/recebe',(req, res) =>{
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8100');
     nome = req.body.nome;
     console.log("deu certo");
     res.send(nome);
