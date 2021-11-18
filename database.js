@@ -21,7 +21,7 @@ const { getDatabase } = require('firebase-admin/database');
 
 // Get a database reference to our blog
 const db = getDatabase();
-const ref = db.ref('server/saving-data/fireblog');
+const ref = db.ref('sappgamoosh-default-rtdb');
 
 const usersRef = ref.child('users');
 usersRef.set({
