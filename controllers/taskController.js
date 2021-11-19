@@ -25,7 +25,7 @@ const getAllTasks = async (req, res, next) =>{
         }else{
             data.forEach(doc=>{
                 const task = new Task(
-                    doc.data().name
+                    doc.data().nome
                    
                 );
                 tasksArray.push(task);
