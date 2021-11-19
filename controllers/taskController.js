@@ -21,7 +21,7 @@ const getAllTasks = async (req, res, next) =>{
         const data = await tasks.get();
         const tasksArray =[];
         if(data.empty){
-            res.status(404).send('No student record found');
+            res.status(404).send('No task record found');
         }else{
             data.forEach(doc=>{
                 const task = new Task(
