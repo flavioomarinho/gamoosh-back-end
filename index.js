@@ -16,4 +16,4 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.listen(config.port, () => console.log('App is listening on url http'+config.port || 3000));
+app.listen(config.port, () => console.log('App is listening on url http'+config.port));
