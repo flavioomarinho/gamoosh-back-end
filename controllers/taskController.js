@@ -20,7 +20,7 @@ const getAllTasks = async (req, res, next) =>{
         const tasks = await firestore.collection('tasks');
         const data = await tasks.get();
         const tasksArray =[];
-        if(data.empty)){
+        if(data.empty){
             res.status(404).send('No student record found');
         }else{
             data.forEach(doc=>{
