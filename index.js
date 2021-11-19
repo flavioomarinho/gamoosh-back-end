@@ -12,9 +12,4 @@ app.use(bodyParser.json());
 app.use('/api', taskRoutes.routes);
 app.set('view engine','html');
 
-
-app.get('/', (req, res) => {
-    res.render('index');
-});
-
 app.listen(config.port, () => console.log('App is listening on url http'+config.port));
