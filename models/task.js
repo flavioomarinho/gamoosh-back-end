@@ -1,7 +1,6 @@
 class Task{
-    constructor(name, score, frequence){
+    constructor(name){
         this.name=name;
-        this.score=score;
-        this.frequence=frequence;
+
     }
 }
