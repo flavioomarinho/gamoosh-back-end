@@ -1,7 +1,7 @@
 'use strict';
 
 const firebase = require('../db');
-const task = require('../models/task');
+const Task = require('../models/task');
 const firestore = firebase.firestore();
 
 const addTask = async (req, res, next)=>{
