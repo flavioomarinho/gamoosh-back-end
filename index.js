@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/api', taskRoutes.routes);
+app.set('view engine','html');
 
 
 app.get('/', (req, res) => {
