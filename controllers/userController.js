@@ -27,6 +27,7 @@ const getAllUsers = async (req, res, next) =>{
                 const user = new User(
                     doc.id,
                     doc.data().name,
+                    doc.data().age,
                     doc.data().cpf,
                     doc.data().telephone,
                     doc.data().email
