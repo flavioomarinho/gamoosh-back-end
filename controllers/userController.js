@@ -17,9 +17,9 @@ const addUser = async (req, res, next)=>{
 
 const getAllUsers = async (req, res, next) =>{
     try {
-        const tasks = await firestore.collection('users');
-        const data = await tasks.get();
-        const tasksArray =[];
+        const users = await firestore.collection('users');
+        const data = await users.get();
+        const usersArray =[];
         if(data.empty){
             res.status(404).send('No users record found');
         }else{
