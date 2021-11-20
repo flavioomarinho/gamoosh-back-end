@@ -28,7 +28,8 @@ const getAllTasks = async (req, res, next) =>{
                     doc.id,
                     doc.data().name,
                     doc.data().score,
-                    doc.data().frequence
+                    doc.data().frequence,
+                    doc.data().status
                    
                 );
                 tasksArray.push(task);
