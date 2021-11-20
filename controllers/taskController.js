@@ -63,7 +63,19 @@ const updateTask = async(req, res, next)=>{
         const data = req.body;
         const task = await firestore.collection('tasks').doc(id);
         await task.update(data);
-        res.send('Task record uodate successfuly');
+        res.send('Task record update successfuly');
+
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+}
+
+const deleteTask = async(req, res, next)=>{
+    try {
+        const id = req.params.id;
+        const task = await firestore.collection('tasks').doc(id);
+        await task.delete();
+        res.send('Task deleted successfuly');
 
     } catch (error) {
         res.status(400).send(error.message);
@@ -74,5 +86,6 @@ module.exports={
     addTask,
     getAllTasks,
     getTask,
-    updateTask
+    updateTask,
+    deleteTask
 }
