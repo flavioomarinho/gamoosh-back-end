@@ -57,8 +57,22 @@ const getTask = async (req, res, next)=>{
     }
 }
 
+const updateTask = async(req, res, next)=>{
+    try {
+        const id = req.params.id;
+        const data = req.body;
+        const task = await firestore.collection('tasks').doc(id);
+        await task.update(data);
+        res.send('Task record uodate successfuly');
+
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+}
+
 module.exports={
     addTask,
     getAllTasks,
-    getTask
+    getTask,
+    updateTask
 }
