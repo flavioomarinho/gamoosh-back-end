@@ -45,7 +45,7 @@ const getAllTasks = async (req, res, next) =>{
 const getTask = async (req, res, next)=>{
     try {
         const id = req.params.id;
-        const student = await firestore.collection('tasks').doc(id);
+        const task = await firestore.collection('tasks').doc(id);
         const data = await task.get();
         if(!data.exists){
             res.status(404).send('Task with the given ID not found');
