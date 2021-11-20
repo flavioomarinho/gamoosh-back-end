@@ -5,4 +5,4 @@ class Task{
     }
 }
 
-module.exports={Task};
+module.exports=Task;
